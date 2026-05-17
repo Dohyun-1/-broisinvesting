@@ -1,2 +1,18 @@
 .DS_Store
 **/.DS_Store
+
+# Secrets — 절대 커밋 금지
+.env
+**/.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+token_refresh.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

@@ -1,0 +1,435 @@
+{
+  "fewshot_version": "4.0",
+  "_purpose": "18개 원본 슬라이드(3 포스트)를 역설계하여 v4.0 시스템이 재생성할 때 이 JSON 구조를 참조할 수 있도록 합니다.",
+  "_v4_notes": [
+    "원본 슬라이드에는 v4.0 규칙(버핏 30%, T-1 attestation 등)이 명시되지 않았으므로, 여기서는 v4.0 주석을 추가하여 '만약 이 슬라이드를 v4.0으로 다시 제작한다면 어떻게 표현할지'를 포함합니다.",
+    "원본 구조는 유지하되, v4.0 필드(buffett_placement_v4, data_freshness_attestation, batch_metadata, acronym_glosses)가 추가됩니다.",
+    "버전 표기는 모두 '4.0'으로 갱신되어 시스템이 일관된 템플릿을 참조합니다."
+  ],
+
+  "posts": [
+    {
+      "post_id": "post_01_private_credit",
+      "topic": "Private Credit Bubble",
+      "total_slides": 8,
+      "narrative_arc": "macro_danger_arc",
+      "batch_structure_v4": [
+        {"batch_id": 1, "type": "cover_solo", "slides": [1]},
+        {"batch_id": 2, "type": "body_pair", "slides": [2, 3]},
+        {"batch_id": 3, "type": "body_pair", "slides": [4, 5]},
+        {"batch_id": 4, "type": "body_pair", "slides": [6, 7]},
+        {"batch_id": 5, "type": "cta_with_pdf", "slides": [8]}
+      ],
+      "slides": [
+        {
+          "v": "4.0",
+          "slide_number": 1,
+          "slide_role": "HOOK",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 1, "batch_type": "cover_solo", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Forget The Bubble",
+            "subtitle": null,
+            "body_blocks": [],
+            "acronym_glosses": []
+          },
+          "_v4_styling_notes": {
+            "headline_font_character": "classic bold newspaper serif, oversized hero (~27% slide height)",
+            "top_prop": "notebook_spring_with_pencil (cover exclusive)"
+          },
+          "visual_elements": ["Larry Fink cutout (central protagonist)", "BlackRock logo badge", "Warren Buffett mascot (30% of Fink's size, bottom_left)"],
+          "_v4_buffett_placement": {
+            "case": "mascot_corner_30pct",
+            "zone": "bottom_left",
+            "primary_subject": "larry_fink_cutout",
+            "note": "v4.0에서는 버핏이 Fink의 ~30% 크기로 축소 렌더링"
+          },
+          "decoration": {"red_underline_under": "Bubble"},
+          "cover_exclusive_tokens_applied": {
+            "notebook_spring_with_pencil": true,
+            "oversized_hero_headline": true,
+            "whitespace_40_percent_plus": true,
+            "sole_focal_subject": true
+          }
+        },
+        {
+          "v": "4.0",
+          "slide_number": 2,
+          "slide_role": "DEFINITION",
+          "theme": "dark_neon",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Meet Private Credit",
+            "subtitle": "Banks won't lend. These guys will.",
+            "body_blocks": [
+              {"type": "bullet_list", "content": ["$2.1T AUM", "10-13% yield pitch", "Retail-facing products"]}
+            ],
+            "acronym_glosses": [
+              {"acronym": "AUM", "gloss": "* AUM = Assets Under Management"}
+            ]
+          },
+          "visual_elements": ["BlackRock logo", "Apollo logo", "Blue Owl logo", "Warren Buffett mascot (eyebrow raised, 30% of logo cluster)"],
+          "_v4_buffett_placement": {
+            "case": "mascot_corner_30pct",
+            "zone": "bottom_right",
+            "primary_subject": "logo_cluster"
+          }
+        },
+        {
+          "v": "4.0",
+          "slide_number": 3,
+          "slide_role": "THE_MACHINE",
+          "theme": "dark_neon",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "How It Works",
+            "subtitle": "Simple. Effective. Dangerous.",
+            "body_blocks": [
+              {"type": "paragraph", "content": "Fund lends to risky firms."},
+              {"type": "paragraph", "content": "Investor gets high yield."}
+            ],
+            "acronym_glosses": []
+          },
+          "visual_elements": ["Mechanism diagram (arrows, boxes)", "Warren Buffett mascot (reading newspaper)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 4,
+          "slide_role": "EVIDENCE",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 3, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Here's Why",
+            "subtitle": null,
+            "body_blocks": [
+              {"type": "big_stat", "content": "40%"},
+              {"type": "paragraph", "content": "Of loans to negative-FCF firms."}
+            ],
+            "acronym_glosses": [
+              {"acronym": "FCF", "gloss": "* FCF = Free Cash Flow"}
+            ]
+          },
+          "_v4_data_freshness": {
+            "numbers_on_slide": [
+              {"value": "40%", "source": "IMF GFSR 2026-04", "category": "latest_release"}
+            ],
+            "t1_reference_date": "2026-04-20"
+          },
+          "visual_elements": ["Bar chart (21% → 40%)", "Warren Buffett mascot (facepalm, 30% of chart size)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left", "primary_subject": "bar_chart_hero"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 5,
+          "slide_role": "IRONY",
+          "theme": "red_devil",
+          "batch_metadata": {"batch_id": 3, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "And Of Course...",
+            "subtitle": "Big banks all got involved too",
+            "body_blocks": [],
+            "acronym_glosses": []
+          },
+          "visual_elements": ["JPMorgan/Goldman/BofA logos", "businessman demon silhouette", "Warren Buffett mascot (laughing)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_right", "primary_subject": "demon_silhouette"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 6,
+          "slide_role": "CATALYST",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 4, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "What Changed?",
+            "subtitle": "AI just disrupted 25% of PC lending",
+            "body_blocks": [
+              {"type": "bullet_list", "content": ["SaaS revenue collapse", "Software layoffs surge", "Loans going sour"]}
+            ],
+            "acronym_glosses": [
+              {"acronym": "PC", "gloss": "* PC = Private Credit"},
+              {"acronym": "SaaS", "gloss": "* SaaS = Software as a Service"}
+            ]
+          },
+          "visual_elements": ["Google News screenshots (SaaS layoffs)", "Warren Buffett mascot (pointing finger)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 7,
+          "slide_role": "OMEN",
+          "theme": "night_forest",
+          "batch_metadata": {"batch_id": 4, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "Withdrawals Frozen",
+            "subtitle": "This is already happening.",
+            "body_blocks": [
+              {"type": "paragraph", "content": "3 funds halted redemptions."}
+            ],
+            "acronym_glosses": []
+          },
+          "visual_elements": ["pixel_error_dialog ('Withdrawal Failed')", "Warren Buffett mascot (eating ice cream)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_right"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 8,
+          "slide_role": "CTA",
+          "theme": "newspaper",
+          "batch_metadata": {"batch_id": 5, "batch_type": "cta_with_pdf", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Want Details?",
+            "subtitle": null,
+            "body_blocks": [
+              {"type": "paragraph", "content": "Comment 'BAGS' for free report."}
+            ],
+            "cta_line": "Comment 'BAGS'",
+            "acronym_glosses": []
+          },
+          "visual_elements": ["Buffett at annual meeting podium (MEDIUM size, cta_podium case)", "PDF preview thumbnail"],
+          "_v4_buffett_placement": {
+            "case": "cta_podium_medium",
+            "zone": "middle_center",
+            "note": "30% 규칙 예외 — medium authoritative presence"
+          },
+          "_v4_paired_pdf": {
+            "filename": "cta_report.pdf",
+            "generated_by": "agent_12_cta_report_builder",
+            "content_outline": "1-page: Hook paragraph + 40% chart + mechanism + 3 watchpoints + sources"
+          }
+        }
+      ]
+    },
+
+    {
+      "post_id": "post_02_ai_bubble",
+      "topic": "AI Bubble Talk",
+      "total_slides": 6,
+      "narrative_arc": "myth_busting_arc",
+      "batch_structure_v4": [
+        {"batch_id": 1, "type": "cover_solo", "slides": [1]},
+        {"batch_id": 2, "type": "body_pair", "slides": [2, 3]},
+        {"batch_id": 3, "type": "body_pair", "slides": [4, 5]},
+        {"batch_id": 4, "type": "cta_with_pdf", "slides": [6]}
+      ],
+      "slides": [
+        {
+          "v": "4.0",
+          "slide_number": 1,
+          "slide_role": "HOOK",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 1, "batch_type": "cover_solo", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "The AI Bubble",
+            "subtitle": null,
+            "body_blocks": [],
+            "acronym_glosses": []
+          },
+          "_v4_styling_notes": {"top_prop": "notebook_spring_with_pencil", "cover_exclusive": true},
+          "visual_elements": ["Sam Altman cutout (central)", "Warren Buffett mascot (neutral, 30% of Altman)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left", "primary_subject": "sam_altman_cutout"},
+          "decoration": {"red_underline_under": "Bubble"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 2,
+          "slide_role": "DEFINITION",
+          "theme": "dark_neon",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Bubble Talk",
+            "subtitle": "Everyone's saying it.",
+            "body_blocks": [
+              {"type": "bullet_list", "content": ["Tech press: 'bubble'", "Analysts: 'overvalued'", "Shorts: piling in"]}
+            ]
+          },
+          "visual_elements": ["News headline clippings", "Warren Buffett mascot (reading newspaper)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_right"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 3,
+          "slide_role": "EVIDENCE",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "Think About This",
+            "subtitle": null,
+            "body_blocks": [
+              {"type": "big_stat", "content": "$180B"},
+              {"type": "paragraph", "content": "NVDA revenue run-rate. Real."}
+            ],
+            "acronym_glosses": [
+              {"acronym": "NVDA", "gloss": "* NVDA = NVIDIA Corp"}
+            ]
+          },
+          "_v4_data_freshness": {
+            "numbers_on_slide": [
+              {"value": "$180B", "source": "NVDA Q1 2026 10-Q", "category": "latest_release"}
+            ]
+          },
+          "visual_elements": ["NVDA candlestick chart", "Jensen Huang cutout", "Warren Buffett mascot (30% of Jensen)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left", "primary_subject": "jensen_huang_cutout"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 4,
+          "slide_role": "PLOT_TWIST",
+          "theme": "red_devil",
+          "batch_metadata": {"batch_id": 3, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "But Here's The Trap",
+            "subtitle": "Everyone's long the same 7 stocks",
+            "body_blocks": []
+          },
+          "visual_elements": ["Mag 7 logos", "devil silhouette", "Warren Buffett mascot (laughing)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_right"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 5,
+          "slide_role": "CONCLUSION",
+          "theme": "dark_neon",
+          "batch_metadata": {"batch_id": 3, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "One Thing Clear",
+            "subtitle": "Not a bubble. A crowd.",
+            "body_blocks": [
+              {"type": "paragraph", "content": "When the crowd runs, you're cooked."}
+            ]
+          },
+          "visual_elements": ["exit sign graphic", "Warren Buffett mascot (pointing)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 6,
+          "slide_role": "CTA",
+          "theme": "newspaper",
+          "batch_metadata": {"batch_id": 4, "batch_type": "cta_with_pdf", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Want The Data?",
+            "body_blocks": [
+              {"type": "paragraph", "content": "Comment 'COOKED' for report."}
+            ],
+            "cta_line": "Comment 'COOKED'"
+          },
+          "visual_elements": ["Buffett at podium", "PDF preview"],
+          "_v4_buffett_placement": {"case": "cta_podium_medium", "zone": "middle_center"},
+          "_v4_paired_pdf": {"filename": "cta_report.pdf"}
+        }
+      ]
+    },
+
+    {
+      "post_id": "post_03_powell_pivot",
+      "topic": "Powell Pivot Signals",
+      "total_slides": 4,
+      "narrative_arc": "fed_watch_arc",
+      "batch_structure_v4": [
+        {"batch_id": 1, "type": "cover_solo", "slides": [1]},
+        {"batch_id": 2, "type": "body_pair", "slides": [2, 3]},
+        {"batch_id": 3, "type": "cta_with_pdf", "slides": [4]}
+      ],
+      "slides": [
+        {
+          "v": "4.0",
+          "slide_number": 1,
+          "slide_role": "HOOK",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 1, "batch_type": "cover_solo", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Powell's Secret",
+            "body_blocks": []
+          },
+          "_v4_styling_notes": {"top_prop": "notebook_spring_with_pencil"},
+          "visual_elements": ["Jerome Powell cutout (central)", "Fed logo", "Warren Buffett mascot (30% of Powell)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left", "primary_subject": "jerome_powell_cutout"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 2,
+          "slide_role": "EVIDENCE",
+          "theme": "light_lined",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "The Race To Cut",
+            "subtitle": "Futures pricing 3 cuts by Dec",
+            "body_blocks": [
+              {"type": "big_stat", "content": "87%"},
+              {"type": "paragraph", "content": "Odds of July cut. Markets sure."}
+            ],
+            "acronym_glosses": [
+              {"acronym": "FOMC", "gloss": "* FOMC = Federal Open Market Committee"}
+            ]
+          },
+          "_v4_data_freshness": {
+            "numbers_on_slide": [
+              {"value": "87%", "source": "CME FedWatch Tool", "category": "t1_close", "date": "2026-04-20"}
+            ]
+          },
+          "visual_elements": ["CME FedWatch screenshot", "Warren Buffett mascot"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_right"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 3,
+          "slide_role": "IRONY",
+          "theme": "red_devil",
+          "batch_metadata": {"batch_id": 2, "batch_type": "body_pair", "batch_size": 2, "position_in_batch": 2},
+          "text_to_render": {
+            "headline": "Same Old Story",
+            "subtitle": "They cut. We pay.",
+            "body_blocks": []
+          },
+          "visual_elements": ["money printer graphic", "Warren Buffett mascot (laughing)"],
+          "_v4_buffett_placement": {"case": "mascot_corner_30pct", "zone": "bottom_left"}
+        },
+        {
+          "v": "4.0",
+          "slide_number": 4,
+          "slide_role": "CTA",
+          "theme": "newspaper",
+          "batch_metadata": {"batch_id": 3, "batch_type": "cta_with_pdf", "batch_size": 1, "position_in_batch": 1},
+          "text_to_render": {
+            "headline": "Full Breakdown?",
+            "body_blocks": [
+              {"type": "paragraph", "content": "Comment 'PIVOT' for report."}
+            ],
+            "cta_line": "Comment 'PIVOT'"
+          },
+          "visual_elements": ["Buffett at podium", "PDF preview"],
+          "_v4_buffett_placement": {"case": "cta_podium_medium", "zone": "middle_center"},
+          "_v4_paired_pdf": {"filename": "cta_report.pdf"}
+        }
+      ]
+    }
+  ],
+
+  "extracted_patterns": {
+    "headline_patterns_used": [
+      "Forget The [X]", "The [X]", "Meet [X]", "How It Works", "Here's Why",
+      "And Of Course", "What Changed?", "Withdrawals Frozen", "Want Details?",
+      "Think About This", "But Here's The Trap", "One Thing Clear", "The Race To [Verb]",
+      "Same Old Story", "Want The Data?", "Full Breakdown?"
+    ],
+    "buffett_pose_distribution_v4_corrected": {
+      "_note": "v4.0에서는 CTA 외 모든 위치가 mascot_corner_30pct",
+      "mascot_corner_30pct": "~85% of slides (대부분)",
+      "central_protagonist_full": "rare, only when Buffett is the topic",
+      "cta_podium_medium": "100% of CTA slides"
+    },
+    "theme_distribution": {
+      "light_lined": "~40%",
+      "dark_neon": "~25%",
+      "red_devil": "~10%",
+      "newspaper": "~15% (mostly CTA)",
+      "plain_beige": "~5%",
+      "night_forest": "~5%"
+    },
+    "cover_exclusive_tokens_frequency": {
+      "applied_on_hook": "100%",
+      "applied_on_non_hook": "0% (enforced by Agent 9, 10, 11)"
+    }
+  }
+}

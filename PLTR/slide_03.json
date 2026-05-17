@@ -1,0 +1,243 @@
+{
+  "v": "4.9.1",
+  "post_id": "palantir_bull_bear_20260511",
+  "topic_slug": "PLTR",
+  "slide_number": 3,
+  "total_slides": 8,
+  "slide_role": "DEFINITION",
+  "theme": "corkboard_logo_center_4corners",
+  "narrative_beat": "승",
+  "narrative_connector_category": "추가",
+
+  "topic_representative_identity_v4_7": "Alex Karp",
+  "topic_mascot_identity_v4_5": "Alex Karp",
+  "topic_mascot_inclusion": false,
+  "_mascot_reason": "S3 explains the company itself, not the person — mascot not appropriate here. Mascot frequency rebalanced to S4/S6/S8.",
+
+  "meme_inclusion": false,
+  "prev_carryover": "Slide 2 introduced the CEO. Slide 3 zooms out: now meet the company itself.",
+
+  "batch_metadata": {
+    "batch_id": 2,
+    "batch_type": "body_pair",
+    "batch_size": 2,
+    "position_in_batch": 2
+  },
+
+  "research_provenance": {
+    "data_sources_used": [
+      {"agent": "agent_3", "source": "BBC Science Focus — Inside Palantir (Bin Laden trace, spy agency origin)", "url": "https://www.sciencefocus.com/future-technology/inside-palantir-the-worlds-scariest-ai-company", "date": "2025-08-10"},
+      {"agent": "agent_3", "source": "PressTV — Palantir most targeting in Ukraine, Gaza", "url": "https://www.presstv.ir/Detail/2026/04/26/767567/algorithm-war-how-palantir-became-pentagon-indispensable-ai-arsenal-wars-abroad", "date": "2026-04-26"},
+      {"agent": "agent_3", "source": "Palantir Foundry product page — commercial enterprise data platform", "url": "https://www.palantir.com/platforms/foundry/", "date": "2026-05-11"},
+      {"agent": "agent_3", "source": "Palantir Gotham — top secret SCI cleared platform", "url": "https://www.palantir.com/platforms/gotham/", "date": "2026-05-11"}
+    ],
+    "data_freshness_attestation": {
+      "t1_numbers_on_this_slide": 0,
+      "indicator_releases_on_this_slide": 0,
+      "unrestricted_context_elements": 4,
+      "reference_close_date": "2026-05-08"
+    },
+    "overall_research_quality": 0.92,
+    "fact_checked": true,
+    "numerical_claims_verified_by_agent_5": true
+  },
+
+  "image_generation_target": "gemini-2.5-flash-image",
+  "output_specification": {
+    "aspect_ratio": "4:5",
+    "resolution": "1080x1350",
+    "format": "PNG",
+    "seed": 7842,
+    "negative_prompt": "do not render JSON keys, field names, hex codes, pixel values, font name literals, COLOR NAMES (no 'apricot', no 'apricot peach', no 'peach', no 'mint', no 'mint green', no 'mustard', no 'mustard yellow', no 'powder blue', no 'blue', no 'green', no 'yellow' rendered as visible text on or above any sticker — color is purely a visual property, never a printed label). ABSOLUTELY ZERO CITATION OR REFERENCE MARKERS ANYWHERE IN THE IMAGE — no [cite:1], no [cite:2], no [cite_start], no [cite_end], no [cite], no [CITE], no [1], no [2], no [3], no any bracketed number, no [^1], no [^2], no (cite:X), no (citation), no (ref:X), no (1), no (2), no ^1, no ^2, no superscript footnote numbers, no 'cite 1', no 'ref 1', no 'Source:', no 'Ref:', no 'Citation:', no URLs as visible text, no footnote markers of any kind. ABSOLUTELY NO rotation or angle markings rendered as visible text — no degree symbols, no '-4°', no 'tilt:X', no degree marks. Tilts are visual only. ABSOLUTELY NO acronyms or abbreviations rendered as visible text — no 'CIA', no 'ICE', no 'NHS', no 'CDC', no 'AI' (write 'artificial intelligence' or just 'software'), no 'OS' (write 'system'), no any acronym. Use full plain everyday English only — the kind of words a 25-year-old beginner investor understands instantly. NO jargon — no 'ontology', no 'multi-tenant', no 'enterprise', no 'platform' (say 'tool' or 'software'). NO ACT label on this slide — no 'ACT 1', no chapter label of any kind. NO MASCOT on this slide. NO polaroid frames on this slide — polaroid frames are slide-1 only. The four corner trait cards are SCRAPBOOK STICKER LABELS (pastel hand-cut rectangles with shadows), NOT polaroid cards. no Unicode emoji. no 3D Memoji, no chibi cartoon. no neon green/pink/purple. no gradient backgrounds. no drop shadows on text. no Korean/Chinese/Japanese text. no page counter. no notebook spring/pencil/binder clip — corkboard only. no 'broisinvesting' watermark — slide 1 exclusive. no grid paper. no graphic war photos. The central Palantir logo must be the official current Palantir wordmark, clean and recognizable on a white background card."
+  },
+
+  "cover_exclusive_tokens_applied": {
+    "broisinvesting_handle_top_center": false,
+    "central_representative_photo_polaroid": false,
+    "company_close_stamp_present": false,
+    "three_pin_cards_present": false,
+    "mascot_forbidden_on_hook": false
+  },
+
+  "text_to_render": {
+    "account_handle_watermark": null,
+    "headline": "So What Is Palantir?",
+    "subtitle": null,
+    "central_logo_card_caption": "PALANTIR TECHNOLOGIES",
+    "corner_trait_cards": [
+      {
+        "card_id": "trait_grid_row1_left",
+        "position": "below_headline_left",
+        "background_color": "deep black",
+        "text_color": "white",
+        "side_image": "small photo cut-out of Osama Bin Laden's face only",
+        "big_title": "SPIES USE IT",
+        "plain_caption": "To find Bin Laden."
+      },
+      {
+        "card_id": "trait_grid_row1_right",
+        "position": "below_headline_right",
+        "background_color": "olive green military camouflage texture",
+        "text_color": "white",
+        "side_image": "small photo cut-out of a soldier in tactical gear",
+        "big_title": "SOLDIERS USE IT",
+        "plain_caption": "To pick war targets."
+      },
+      {
+        "card_id": "trait_grid_row2_left",
+        "position": "lower_grid_left",
+        "background_color": "neutral mid-gray",
+        "text_color": "deep black",
+        "side_image": "small photo cut-out of a glass corporate office tower",
+        "big_title": "COMPANIES",
+        "plain_caption": "Like Airbus and Ferrari use it."
+      },
+      {
+        "card_id": "trait_grid_row2_right",
+        "position": "lower_grid_right",
+        "background_color": "clean white",
+        "text_color": "deep black",
+        "side_image": "small photo cut-out of the White House",
+        "big_title": "GOVERNMENTS USE IT",
+        "plain_caption": "For top U.S. secrets."
+      }
+    ],
+    "labels_on_visuals": [],
+    "cta_line": null
+  },
+
+  "styling_spec": {
+    "headline_style": {
+      "font_character": "classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel, very large hero headline",
+      "size_hint": "single-line oversized headline (~22% slide height) at top center",
+      "case": "Title Case",
+      "decoration": {"type": "red_underline_handdrawn", "target_word": "Palantir"}
+    },
+    "central_logo_card_style": {
+      "_v4_9_1_new": true,
+      "frame": "clean white card, slightly larger than the corner trait cards, no polaroid border — just a flat white card pinned to cork",
+      "logo_treatment": "official current Palantir Technologies wordmark, black text on white card, sharp and recognizable",
+      "caption_font": "small clean sans-serif underneath the logo in muted sepia gray, all caps, wide letter spacing"
+    },
+    "corner_trait_card_style": {
+      "shape": "small slightly-uneven rectangle, hand-cut pastel sticker feel, soft drop shadow on cork",
+      "big_title_font": "classic bold newspaper serif extra-bold, deep black, all caps, dominant on the sticker",
+      "plain_caption_font": "clean modern sans-serif, medium weight, small caption underneath the title, deep black ink"
+    }
+  },
+
+  "background_spec": {
+    "theme_id": "corkboard_logo_center_4corners",
+    "base_color_meaning": "warm Kraft-brown corkboard",
+    "texture_description": "natural cork bulletin board with visible grain and small pin holes",
+    "ruling_style": "none",
+    "paper_texture_level": "strong",
+    "prompt_description_for_gemini": "warm Kraft-brown natural cork bulletin board fills the slide with visible cork grain and small pin holes."
+  },
+
+  "layout_spec": {
+    "top_element": "push_pin",
+    "zone_allocation": {
+      "top_center_strip": ["headline_one_line"],
+      "middle_grid_row1_left": "trait_grid_row1_left",
+      "middle_grid_row1_right": "trait_grid_row1_right",
+      "middle_center_between_rows": "palantir_logo_card",
+      "middle_grid_row2_left": "trait_grid_row2_left",
+      "middle_grid_row2_right": "trait_grid_row2_right"
+    },
+    "topic_mascot_placement_v4_7_1": {"case": "not_present"},
+    "acronym_gloss_placements": [],
+    "z_index_stack": ["background", "palantir_logo_card", "trait_grid_cards", "headline"],
+    "element_rotations": [
+      {"element_id": "palantir_logo_card", "rotation_deg": -1},
+      {"element_id": "trait_grid_row1_left", "rotation_deg": -3},
+      {"element_id": "trait_grid_row1_right", "rotation_deg": 3},
+      {"element_id": "trait_grid_row2_left", "rotation_deg": 4},
+      {"element_id": "trait_grid_row2_right", "rotation_deg": -3}
+    ],
+    "white_space_percent": 12,
+    "headline_height_percent_of_slide": 22,
+    "focal_point_zone": "middle_center"
+  },
+
+  "visual_elements": [
+    {
+      "asset_id": "palantir_logo_card",
+      "asset_type": "logo_badge",
+      "subject_or_variant": "central Palantir Technologies official wordmark on white card",
+      "purpose": "central_company_identity",
+      "size_category": "central",
+      "description_for_gemini": "MIDDLE-CENTER of the slide, vertically positioned BETWEEN the two rows of trait stickers (not in any corner — strictly between row 1 and row 2 of the 2x2 grid), a SMALL clean flat white card (NO polaroid border — just a flat white rectangle) about 22% slide width and 10% slide height (deliberately SMALL), pinned to the corkboard with one bright red push-pin near the top center of the card, very subtly off-vertical (visual tilt only — no degree numbers printed). On the card, render the official current Palantir Technologies wordmark in clean sharp black. Below the logo on the card, in tiny clean sans-serif muted sepia gray all caps with wide letter spacing: 'PALANTIR TECHNOLOGIES'. The card is a small anchor between the four big trait stickers."
+    },
+    {
+      "asset_id": "trait_grid_row1_left",
+      "asset_type": "stat_card",
+      "subject_or_variant": "apricot peach pastel sticker — who uses Palantir #1",
+      "purpose": "company_trait_grid_row1_left",
+      "size_category": "medium",
+      "description_for_gemini": "Upper LEFT of the slide BELOW the headline, a LARGE rectangular card with a DEEP BLACK matte background (hand-cut feel, soft drop shadow on cork), about 44% slide width and 26% slide height, tilted slightly counter-clockwise. On the LEFT edge inside the card, a SMALL photoreal cut-out portrait of OSAMA BIN LADEN's face only (head-and-shoulders from real news photographs, background removed) — VERY small accent, occupying only about 60% of card height in a narrow LEFT column about 20% of card width. The remaining ~80% of card width is for TEXT — which is the DOMINANT visual element of the card. Two pieces of text in WHITE ink, filling the right side big and bold: VERY LARGE hero title in classic newspaper serif extra-bold, all caps, occupying about 52% of card height (so big it nearly fills the card vertically on its line): 'SPIES USE IT'. Below the title, BIG readable caption in clean medium sans-serif at about 24% of card height: 'To find Bin Laden.' Text must be IMMEDIATELY READABLE from a phone-screen distance. Do NOT print any color name. Visual tilt only — no degree numbers."
+    },
+    {
+      "asset_id": "trait_grid_row1_right",
+      "asset_type": "stat_card",
+      "subject_or_variant": "mint green pastel sticker — who uses Palantir #2",
+      "purpose": "company_trait_grid_row1_right",
+      "size_category": "medium",
+      "description_for_gemini": "Upper RIGHT of the slide BELOW the headline (same row), a LARGE rectangular card with a subtle MILITARY OLIVE-GREEN CAMOUFLAGE background (muted, low-contrast, worn military fabric feel), about 44% slide width and 26% slide height, hand-cut feel with soft drop shadow on cork, tilted slightly clockwise. On the LEFT edge inside the card, a SMALL photoreal cut-out of a real SOLDIER in tactical combat gear (head and upper shoulders, helmet visible, background removed) — small accent, occupying only about 60% of card height in a narrow LEFT column about 20% of card width. The remaining ~80% of card width is for TEXT (the dominant element). Two pieces of text in WHITE ink: VERY LARGE hero title in classic newspaper serif extra-bold, all caps, about 52% of card height: 'SOLDIERS USE IT'. Below, BIG readable caption in clean medium sans-serif at about 24% of card height: 'To pick war targets.' Text must be IMMEDIATELY READABLE from a phone-screen distance. Do NOT print any color name. Visual tilt only."
+    },
+    {
+      "asset_id": "trait_grid_row2_left",
+      "asset_type": "stat_card",
+      "subject_or_variant": "mustard yellow pastel sticker — who uses Palantir #3",
+      "purpose": "company_trait_grid_row2_left",
+      "size_category": "medium",
+      "description_for_gemini": "Lower LEFT of the slide (second row of the 2x2 grid, below the upper-left card), a LARGE rectangular card with a NEUTRAL MID-GRAY flat background (slightly textured paper feel), about 44% slide width and 26% slide height, hand-cut feel with soft drop shadow on cork, tilted slightly clockwise. On the RIGHT edge inside the card, a SMALL photoreal cut-out of a modern GLASS CORPORATE OFFICE TOWER (tall sleek glass-and-steel skyscraper, background removed) — small accent, occupying only about 60% of card height in a narrow RIGHT column about 20% of card width. The remaining ~80% of card width (the LEFT side) is for TEXT (the dominant element). Two pieces of text in DEEP BLACK ink, on the LEFT: VERY LARGE hero title in classic newspaper serif extra-bold, all caps, about 52% of card height: 'COMPANIES'. Below, BIG readable caption in clean medium sans-serif at about 24% of card height: 'Like Airbus and Ferrari use it.' Text must be IMMEDIATELY READABLE. Do NOT print any color name. Visual tilt only."
+    },
+    {
+      "asset_id": "trait_grid_row2_right",
+      "asset_type": "stat_card",
+      "subject_or_variant": "powder blue pastel sticker — who uses Palantir #4",
+      "purpose": "company_trait_grid_row2_right",
+      "size_category": "medium",
+      "description_for_gemini": "Lower RIGHT of the slide (second row of the 2x2 grid, below the upper-right card), a LARGE rectangular card with a CLEAN WHITE background (very light, paper-like), about 44% slide width and 26% slide height, hand-cut feel with soft drop shadow on cork, tilted slightly counter-clockwise. On the LEFT edge inside the card, a SMALL photoreal cut-out of the real WHITE HOUSE (iconic U.S. presidential residence with columns and front portico, well-known front-facing angle, background removed) — small accent, occupying only about 60% of card height in a narrow LEFT column about 20% of card width. The remaining ~80% of card width is for TEXT (the dominant element). Two pieces of text in DEEP BLACK ink: VERY LARGE hero title in classic newspaper serif extra-bold, all caps, about 52% of card height: 'GOVERNMENTS USE IT'. Below, BIG readable caption in clean medium sans-serif at about 24% of card height: 'For top U.S. secrets.' Text must be IMMEDIATELY READABLE. Do NOT print any color name. Visual tilt only."
+    }
+  ],
+
+  "scrapbook_treatment": {
+    "paper_underlays": [
+      {"element_id": "palantir_logo_card", "underlay_color_meaning": "white photo card"},
+      {"element_id": "trait_top_left", "underlay_color_meaning": "apricot peach pastel sticker"},
+      {"element_id": "trait_top_right", "underlay_color_meaning": "mint green pastel sticker"},
+      {"element_id": "trait_bottom_left", "underlay_color_meaning": "mustard yellow pastel sticker"},
+      {"element_id": "trait_bottom_right", "underlay_color_meaning": "powder blue pastel sticker"}
+    ],
+    "torn_edges_applied_to": [],
+    "decorative_props": [
+      {"prop_id": "red_underline", "placement": "under word Palantir in headline"}
+    ]
+  },
+
+  "gemini_prompt": "CRITICAL CONSTRAINT — This image MUST contain ZERO citation markers, footnote numbers, bracketed digits, 'cite' tags, '[1]', '[2]', '[cite:1]', '[cite_start]', '[cite_end]', '(1)', '(cite)', '^1', 'Source:', 'Ref:', or ANY citation/reference/footnote indicator of any kind anywhere in the rendered slide text. If any such marker appears in the output, the image is a failure. Read this constraint twice before generating. Create a vertical 4:5 Instagram card-news body slide in the broisinvesting style — a corkboard layout where the HEADLINE sits at the TOP CENTER and ALL FOUR TRAIT STICKERS sit BELOW the headline in a 2x2 grid with the small Palantir logo anchored between the two rows. Background: warm Kraft-brown natural cork bulletin board with visible cork grain and small pin holes. NO broisinvesting watermark. NO page counter. NO grid paper. NO 'ACT' chapter label anywhere (deprecated). NO MASCOT anywhere on this slide. NO polaroid frames anywhere — polaroid frames are slide-1 only. TOP CENTER STRIP (top ~22% of the slide): a single-line oversized hero headline 'So What Is Palantir?' in classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel, Title Case, about 22% slide height — very large and arresting. Under the word 'Palantir' draw a hand-drawn burnt-sienna red marker underline. BELOW THE HEADLINE, FOUR LARGE TRAIT CARDS in a 2x2 GRID. Each card is a slightly-uneven hand-cut rectangle with soft drop shadow on cork, about 44% slide width and 26% slide height — large dominant visual elements. In EVERY card, the TEXT is the DOMINANT visual element: VERY LARGE hero title (newspaper serif extra-bold, all caps, about 52% of card height — so big it nearly fills the card vertically on its line) and a BIG readable caption (clean medium sans-serif, about 24% of card height). The side image is SMALL — only about 60% of card height in a narrow 20% card-width column on one edge. The text occupies the remaining ~80% card width and must be IMMEDIATELY READABLE from a phone-screen distance. ROW 1 LEFT — DEEP BLACK matte card, tilted slightly counter-clockwise. SMALL Bin Laden face cut-out (real news photo, background removed) on the LEFT edge in a narrow ~20% column. RIGHT ~80% of card carries the dominant text in WHITE: VERY LARGE hero title 'SPIES USE IT' (newspaper serif extra-bold, all caps, ~52% card height) — BIG caption (~24% card height) 'To find Bin Laden.' ROW 1 RIGHT — MILITARY OLIVE-GREEN CAMOUFLAGE card (muted, low-contrast), tilted slightly clockwise. SMALL soldier cut-out (tactical gear, helmet, background removed) on the LEFT edge in a narrow ~20% column. RIGHT ~80% text in WHITE: VERY LARGE title 'SOLDIERS USE IT' — BIG caption 'To pick war targets.' ROW 2 LEFT — NEUTRAL MID-GRAY card, tilted slightly clockwise. SMALL glass corporate office tower cut-out (background removed) on the RIGHT edge in a narrow ~20% column. LEFT ~80% text in DEEP BLACK: VERY LARGE title 'COMPANIES' — BIG caption 'Like Airbus and Ferrari use it.' ROW 2 RIGHT — CLEAN WHITE card, tilted slightly counter-clockwise. SMALL White House cut-out (front-facing, background removed) on the LEFT edge in a narrow ~20% column. RIGHT ~80% text in DEEP BLACK: VERY LARGE title 'GOVERNMENTS USE IT' — BIG caption 'For top U.S. secrets.' Color names (e.g. 'black', 'green', 'gray', 'white', 'olive', 'mint', 'peach', 'mustard', 'blue') are NEVER printed on any card — color is purely a visual property of the card itself, never a label. BETWEEN THE TWO ROWS, vertically centered between row 1 and row 2 of the grid, a SMALL clean flat white logo card (NOT a polaroid, no thick border — just a small flat white rectangle) about 22% slide width and 10% slide height, pinned with one red push-pin, very subtly off-vertical. On the card render the official current Palantir Technologies wordmark in clean sharp black. Below the logo in tiny clean sans-serif muted sepia gray, all caps, wide letter spacing: 'PALANTIR TECHNOLOGIES'. The four stickers are the dominant visual; the logo card is a small connecting anchor between rows. NO bottom conclusion line. Composition: about 10% open cork whitespace, all elements have casual handmade tilts in small varying directions. ABSOLUTELY NO acronyms — no 'CIA', no 'ICE', no 'NHS', no 'AI', no 'OS', no any acronym. Use only full plain everyday English a 25-year-old beginner instantly understands. ABSOLUTELY NO business jargon — no 'ontology', no 'platform', no 'enterprise', no 'multi-tenant'. ALL TILTS ARE PURELY VISUAL — do NOT print any degree symbols, numeric tilt values, angle labels, or rotation text. ABSOLUTELY DO NOT render any JSON keys, hex codes, pixel values, font name literals, citation tags, footnote markers, square-bracketed numbers, or cite references as visible text. No Unicode emoji. No 3D Memoji or chibi cartoons. No notebook spring, no pencil, no binder clip — this is a corkboard. No page counter. No Korean, Chinese, or Japanese text. No 'broisinvesting' watermark — that is exclusive to slide 1. FINAL CHECK before finalizing: verify there are ZERO citation markers, ZERO bracketed numbers, ZERO '[cite' patterns, ZERO 'cite_start' or 'cite_end' tags, ZERO footnote symbols anywhere in the image. If even one such marker appears, the output is invalid.",
+
+  "quality_checklist_passed": {
+    "master_prompt_complete": true,
+    "english_only": true,
+    "no_3d_memoji": true,
+    "no_unicode_emoji_in_text": true,
+    "seed_7842": true,
+    "v4_t1_data_attestation_present": true,
+    "v4_batch_metadata_set": true,
+    "v4_account_handle_watermark_hook_only": true,
+    "v4_6_no_page_counter": true,
+    "v4_6_2_citation_zero_in_negative_prompt": true,
+    "v4_7_angle_rotation_zero_in_negative_prompt": true,
+    "v4_8_headline_short": true,
+    "v4_9_a_text_minimalism": true,
+    "v4_9_b_no_acronyms_at_all": true,
+    "v4_9_b_beginner_friendly_plain_english": true,
+    "v4_9_1_no_act_label": true,
+    "v4_9_1_no_mascot": true,
+    "s3_visually_distinct_logo_center_4corners": true,
+    "s3_explains_what_company_does_simply": true
+  }
+}

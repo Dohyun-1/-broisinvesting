@@ -1,0 +1,414 @@
+{
+  "_template_version": "4.5",
+  "_purpose": "Agent 11이 Gemini 2.5 Flash Image에 전달할 최종 JSON을 만들 때 참조하는 템플릿. v4.5 토픽 마스코트 시스템 반영.",
+  "_changelog_from_3.2": [
+    "batch_metadata 필드 추가 (v4.0)",
+    "research_provenance.data_freshness_attestation 확장 (v4.0)",
+    "layout_spec.buffett_placement_v4 객체 추가 (v4.0)",
+    "text_to_render.acronym_glosses 배열 추가 (v3.3 → v4.0 공식 흡수)",
+    "styling_spec.acronym_gloss_style 객체 추가 (v4.0)",
+    "quality_checklist_passed에 v4_* 감사 4개 추가",
+    "🆕 v4.4: source_tier_distribution 5단계로 확장, earnings_transcript_mandate 추가",
+    "🆕 v4.5: buffett_placement_v4 → topic_mascot_placement_v4_5 rename. topic_mascot_identity + topic_mascot_visual_signature 최상위 필드 추가. 버핏 디폴트 폐기 — 토픽 관련 인물이 마스코트."
+  ],
+
+  "v": "4.5",
+  "slide_number": 0,
+  "total_slides": 0,
+  "slide_role": "HOOK | DEFINITION | THE_MACHINE | EVIDENCE | IRONY | CATALYST | OMEN | PLOT_TWIST | CONCLUSION | CTA",
+  "theme": "light_lined | dark_neon | red_devil | newspaper | plain_beige | night_forest",
+
+  "topic_mascot_identity_v4_5": "string (e.g., 'Jensen Huang' for NVDA, 'Tim Cook' for Apple, '이재용' for Samsung, 'Warren Buffett' for Berkshire/value, 'Jerome Powell' for Fed). Decided once per post by Orchestrator.",
+  "topic_mascot_visual_signature_v4_5": "string (signature外形 keywords for Gemini prompt — e.g., 'gray hair, glasses, signature black leather jacket' for Jensen Huang)",
+
+  "batch_metadata": {
+    "_new_v4": true,
+    "batch_id": 0,
+    "batch_type": "cover_solo | body_pair | body_solo_remainder | cta_with_pdf",
+    "batch_size": 0,
+    "position_in_batch": 0
+  },
+
+  "research_provenance": {
+    "data_sources_used": [
+      {"agent": "string", "source": "string", "url": "string", "date": "YYYY-MM-DD"}
+    ],
+    "data_freshness_attestation": {
+      "_new_v4": true,
+      "t1_numbers_on_this_slide": 0,
+      "indicator_releases_on_this_slide": 0,
+      "unrestricted_context_elements": 0,
+      "reference_close_date": "YYYY-MM-DD",
+      "source_tier_distribution": {
+        "primary_gov": 0,
+        "major_media": 0,
+        "analysis_thinktank": 0
+      }
+    },
+    "overall_research_quality": 0.0,
+    "fact_checked": true,
+    "numerical_claims_verified_by_agent_5": true
+  },
+
+  "image_generation_target": "gemini-2.5-flash-image",
+  "output_specification": {
+    "aspect_ratio": "4:5",
+    "resolution": "1080x1350",
+    "format": "PNG",
+    "seed": 7842,
+    "negative_prompt": "do not render JSON keys, field names, hex codes like #1A1A1A, pixel values like 28px, font name literals like Roboto or Old Standard TT, citation tags like [cite:10] or [1]. do not include Unicode emoji. do not use 3D rendered characters or Memoji-style avatars. no grid lines or vertical rules on light themes (horizontal only). no binder clip. no spring or pencil on non-cover slides. no oversized headlines on non-cover slides. no Korean, Chinese, or Japanese text. no gradient backgrounds. no drop shadows on text. no neon green, pink, or purple accent colors. on non-cover slides only: no 'broisinvesting' handle, no account watermark, no @-handle text anywhere."
+  },
+
+  "cover_exclusive_tokens_applied": {
+    "_enforcement": "only true when slide_role == HOOK; all false for non-HOOK",
+    "notebook_spring_with_pencil": false,
+    "oversized_hero_headline": false,
+    "whitespace_40_percent_plus": false,
+    "sole_focal_subject": false,
+    "account_handle_watermark": false
+  },
+
+  "text_to_render": {
+    "_rule": "Only literal words meant to appear on the slide. No JSON/hex/px/font-name literals.",
+    "account_handle_watermark": "string 'broisinvesting' (HOOK ONLY) | null (every non-HOOK slide MUST be null)",
+    "headline": "string (2-5 words, Title Case)",
+    "subtitle": "string (6-12 words) | null",
+    "small_caps_label": "string | null",
+    "body_blocks": [
+      {
+        "block_id": "b1",
+        "type": "bullet_list | paragraph | quote | big_stat",
+        "content": "string or array of strings (2-5 words per bullet, 1 short sentence per paragraph max 12 words)",
+        "highlights": [
+          {
+            "word_or_phrase": "string",
+            "color_meaning": "danger_red | dark_theme_yellow | positive_green",
+            "weight": "bold | regular"
+          }
+        ],
+        "alignment": "left | center | right"
+      }
+    ],
+    "labels_on_visuals": [
+      {"label": "string", "target_element": "string"}
+    ],
+    "cta_line": "string | null",
+    "acronym_glosses": [
+      {
+        "_new_v4": true,
+        "acronym": "FOMC",
+        "gloss": "* FOMC = Federal Open Market Committee",
+        "_format_rule": "leading asterisk required"
+      }
+    ]
+  },
+
+  "styling_spec": {
+    "_rule": "Style hints only; never appear as rendered text in the image.",
+    "headline_style": {
+      "font_character": "classic bold newspaper serif typeface, deep black ink",
+      "size_hint": "oversized hero (~25% slide height) [HOOK] | normal (~12-18% slide height) [non-HOOK]",
+      "case": "Title Case",
+      "decoration": {
+        "type": "red_underline | none",
+        "target_word": "string | null"
+      }
+    },
+    "subtitle_style": {
+      "font_character": "modern clean sans-serif, Roboto-like, rendered noticeably larger than body text, moderately prominent",
+      "size_hint": "approximately 1.1x body size"
+    },
+    "body_style": {
+      "font_character": "modern clean sans-serif typeface, Roboto-like, medium weight, highly legible, rounded",
+      "color_meaning": "deep black ink"
+    },
+    "small_caps_style": {
+      "font_character": "small uppercase label, wide letter spacing, modern clean sans-serif"
+    },
+    "acronym_gloss_style": {
+      "_new_v4": true,
+      "font_character": "small muted-gray italic sans-serif",
+      "size_hint": "approximately 0.5x body size",
+      "placement_style": "recessive margin footnote"
+    },
+    "account_handle_watermark_style": {
+      "_cover_only": true,
+      "_rule": "Populated only when slide_role == HOOK; null/omitted on every non-HOOK slide.",
+      "font_character": "modern clean sans-serif, Roboto-like, light or regular weight, slightly wider letter spacing",
+      "case": "lowercase",
+      "color_meaning": "faded pencil-gray / muted graphite, low-contrast watermark",
+      "size_hint": "very small, approximately 0.4-0.5x body size (≈1.6-2.2% of slide height)",
+      "placement_style": "top center, directly below the spring binding, comfortably above the oversized headline so it never competes with title or subject",
+      "decoration": "no underline, no box, no @ prefix"
+    }
+  },
+
+  "background_spec": {
+    "theme_id": "light_lined | dark_neon | red_devil | newspaper | plain_beige | night_forest",
+    "base_color_meaning": "string (natural language, no hex)",
+    "texture_description": "string",
+    "ruling_style": "horizontal_only | none",
+    "special_effects": "string | null",
+    "paper_texture_level": "subtle | medium | strong",
+    "prompt_description_for_gemini": "string (complete natural-language paragraph for Agent 11 to embed)"
+  },
+
+  "layout_spec": {
+    "top_element": "notebook_spring_with_pencil | masking_tape | push_pin | torn_sticker_corner",
+    "zone_allocation": {
+      "top_full_width": "element_id | null",
+      "top_left": "element_id | null",
+      "top_center": "element_id | null",
+      "top_right": "element_id | null",
+      "middle_left": "element_id | null",
+      "middle_center": "element_id | null",
+      "middle_right": "element_id | null",
+      "bottom_left": "element_id | null",
+      "bottom_center": "element_id | null",
+      "bottom_right": "element_id | null"
+    },
+    "topic_mascot_placement_v4_5": {
+      "_new_v4_5": true,
+      "_renamed_from": "buffett_placement_v4",
+      "case": "mascot_corner_30pct | central_protagonist_full | cta_podium_medium | not_present",
+      "zone": "string (one of zone names)",
+      "size_directive_for_prompt": "string (e.g., 'approximately 30% of bloomberg_terminal_mock rendered size, clearly smaller as a corner mascot')",
+      "rotation_deg": 0,
+      "primary_subject_reference": "element_id | null"
+    },
+    "acronym_gloss_placements": [
+      {
+        "_new_v4": true,
+        "acronym": "string",
+        "full_gloss": "* ABC = Full Name",
+        "zone": "top_left | top_right | bottom_left | bottom_right",
+        "style_note": "muted gray italic sans-serif, ~0.5x body size, recessive"
+      }
+    ],
+    "z_index_stack": [
+      "1. background",
+      "2. paper_decorations",
+      "3. images",
+      "4. logo_badges",
+      "5. text",
+      "6. scrapbook_props",
+      "7. acronym_gloss_footnotes"
+    ],
+    "element_rotations": [
+      {"element_id": "string", "rotation_deg": 0.0}
+    ],
+    "white_space_percent": 0,
+    "headline_height_percent_of_slide": 0,
+    "subtitle_size_multiplier_vs_body": null,
+    "focal_point_zone": "string"
+  },
+
+  "visual_elements": [
+    {
+      "asset_id": "string",
+      "asset_type": "character_cutout | topic_mascot | meme_ui | logo_badge | icon | chart | news_screenshot | movie_still | stat_card | chart_annotated | speech_bubble | before_after_split | stamp_overlay | legal_pad_handwritten | bloomberg_terminal_mock | newspaper_clipping_aesthetic",
+      "subject_or_variant": "string (if topic_mascot: pose_id from universal pose catalog)",
+      "purpose": "string",
+      "size_category": "small | medium | large | central",
+      "mascot_size_rule_v4_5": "mascot_corner_30pct | central_protagonist_full | cta_podium_medium | not_applicable",
+      "primary_subject_reference_for_sizing": "asset_id | null",
+      "source_image_url": "string | null",
+      "description_for_gemini": "string (natural-language description)"
+    }
+  ],
+
+  "scrapbook_treatment": {
+    "paper_underlays": [
+      {"element_id": "string", "underlay_color_meaning": "warm tan-beige | cream | off-white"}
+    ],
+    "torn_edges_applied_to": ["element_id"],
+    "decorative_props": [
+      {"prop_id": "masking_tape | push_pin | dried_flower | hand_drawn_arrow | red_underline | chevrons", "placement": "zone | near_element_id"}
+    ]
+  },
+
+  "reference_similarity": {
+    "most_similar_original_post_index": 0,
+    "most_similar_original_slide_index": 0,
+    "similarity_rationale": "string"
+  },
+
+  "gemini_prompt": "string (SINGLE natural-language paragraph, composed by Agent 11, ready to send to Gemini 2.5 Flash Image. Must NOT contain JSON syntax, hex codes, px units, citation tags, or literal font names. Must embed background_spec.prompt_description_for_gemini, each visual_element.description_for_gemini, layout instructions, whitespace ratios, headline/body/subtitle styling hints, buffett_placement_v4.size_directive_for_prompt when applicable, and acronym_gloss_placements as natural language.)",
+
+  "quality_checklist_passed": {
+    "master_prompt_complete": true,
+    "leakage_scan_passed": true,
+    "english_only": true,
+    "cover_exclusive_tokens_correctly_applied": true,
+    "headline_word_count_valid": true,
+    "body_blocks_max_2": true,
+    "body_font_is_roboto_like": true,
+    "headline_font_is_newspaper_serif": true,
+    "subtitle_size_1_1x_body_if_present": true,
+    "light_theme_horizontal_only_no_grid": true,
+    "no_binder_clip": true,
+    "warren_buffett_mascot_included_if_non_cta": true,
+    "no_3d_memoji": true,
+    "no_unicode_emoji_in_text": true,
+    "seed_7842": true,
+    "v4_buffett_size_rule_verified": true,
+    "v4_t1_data_attestation_present": true,
+    "v4_acronym_gloss_format_valid": true,
+    "v4_batch_metadata_set": true,
+    "v4_account_handle_watermark_hook_only": true
+  },
+
+  "__example_filled_slide_HOOK_v4__": {
+    "_purpose": "A fully-populated example of a HOOK slide in v4.0 format for reference.",
+    "v": "4.0",
+    "slide_number": 1,
+    "total_slides": 8,
+    "slide_role": "HOOK",
+    "theme": "light_lined",
+    "batch_metadata": {
+      "batch_id": 1,
+      "batch_type": "cover_solo",
+      "batch_size": 1,
+      "position_in_batch": 1
+    },
+    "research_provenance": {
+      "data_sources_used": [
+        {"agent": "agent_3", "source": "NYSE close", "url": "https://www.nyse.com/...", "date": "2026-04-20"}
+      ],
+      "data_freshness_attestation": {
+        "t1_numbers_on_this_slide": 0,
+        "indicator_releases_on_this_slide": 0,
+        "unrestricted_context_elements": 1,
+        "reference_close_date": "2026-04-20",
+        "source_tier_distribution": {"primary_gov": 0, "major_media": 1, "analysis_thinktank": 0}
+      },
+      "overall_research_quality": 0.91,
+      "fact_checked": true,
+      "numerical_claims_verified_by_agent_5": true
+    },
+    "image_generation_target": "gemini-2.5-flash-image",
+    "output_specification": {
+      "aspect_ratio": "4:5",
+      "resolution": "1080x1350",
+      "format": "PNG",
+      "seed": 7842,
+      "negative_prompt": "do not render JSON keys, field names, hex codes, pixel values, font name literals, citation tags. no Unicode emoji. no 3D Memoji. no grid lines on light themes. no binder clip. no Korean/Chinese/Japanese text."
+    },
+    "cover_exclusive_tokens_applied": {
+      "notebook_spring_with_pencil": true,
+      "oversized_hero_headline": true,
+      "whitespace_40_percent_plus": true,
+      "sole_focal_subject": true,
+      "account_handle_watermark": true
+    },
+    "text_to_render": {
+      "account_handle_watermark": "broisinvesting",
+      "headline": "Forget The Bubble",
+      "subtitle": null,
+      "small_caps_label": null,
+      "body_blocks": [],
+      "labels_on_visuals": [],
+      "cta_line": null,
+      "acronym_glosses": []
+    },
+    "styling_spec": {
+      "headline_style": {
+        "font_character": "classic bold newspaper serif typeface, deep black ink",
+        "size_hint": "oversized hero (~27% slide height)",
+        "case": "Title Case",
+        "decoration": {"type": "red_underline", "target_word": "Bubble"}
+      },
+      "account_handle_watermark_style": {
+        "font_character": "modern clean sans-serif, Roboto-like, light weight, slightly wider letter spacing",
+        "case": "lowercase",
+        "color_meaning": "faded pencil-gray / muted graphite, low-contrast watermark",
+        "size_hint": "very small, approximately 0.45x body size",
+        "placement_style": "top center, directly below the spring binding, well above the oversized headline",
+        "decoration": "no underline, no box, no @ prefix"
+      }
+    },
+    "background_spec": {
+      "theme_id": "light_lined",
+      "base_color_meaning": "bright warm off-white cream, brighter than vintage",
+      "texture_description": "bright cream off-white notebook paper with ONLY horizontal ruled lines, soft faded blue-gray rules about 8mm apart, NO vertical lines, NO grid pattern, subtle paper grain",
+      "ruling_style": "horizontal_only",
+      "paper_texture_level": "subtle",
+      "prompt_description_for_gemini": "bright cream off-white notebook paper with ONLY horizontal ruled lines, soft faded blue-gray rules about 8mm apart, NO vertical lines, NO grid pattern, subtle paper grain and slight warm yellowing in the corners"
+    },
+    "layout_spec": {
+      "top_element": "notebook_spring_with_pencil",
+      "zone_allocation": {
+        "top_full_width": "notebook_spring_with_pencil",
+        "top_center": ["account_handle_watermark", "headline_oversized"],
+        "middle_center": "larry_fink_cutout",
+        "bottom_left": "warren_buffett_mascot"
+      },
+      "account_handle_watermark": {
+        "literal_text": "broisinvesting",
+        "zone": "top_center",
+        "vertical_position_hint": "directly below spring binding, ~5% slide-height gap above the oversized headline",
+        "size_hint": "very small (~1.8% slide height)",
+        "rotation_deg": 0
+      },
+      "buffett_placement_v4": {
+        "case": "mascot_corner_30pct",
+        "zone": "bottom_left",
+        "size_directive_for_prompt": "approximately 30% of larry_fink_cutout's rendered size, clearly smaller as a corner mascot reaction character",
+        "rotation_deg": -3,
+        "primary_subject_reference": "larry_fink_cutout"
+      },
+      "acronym_gloss_placements": [],
+      "z_index_stack": ["background", "paper_decorations", "images", "logo_badges", "text", "scrapbook_props", "acronym_gloss_footnotes"],
+      "white_space_percent": 42,
+      "headline_height_percent_of_slide": 27,
+      "subtitle_size_multiplier_vs_body": null,
+      "focal_point_zone": "middle_center"
+    },
+    "visual_elements": [
+      {
+        "asset_id": "larry_fink_cutout",
+        "asset_type": "character_cutout",
+        "subject_or_variant": "Larry Fink BlackRock CEO",
+        "purpose": "sole_focal_subject",
+        "size_category": "central",
+        "buffett_size_rule_v4": "not_applicable",
+        "primary_subject_reference_for_sizing": null,
+        "source_image_url": "https://example.com/fink.jpg",
+        "description_for_gemini": "In the middle center, place a photorealistic cutout of Larry Fink (BlackRock CEO) — older man with glasses, dark suit — background removed, torn paper edge with tan-beige underlay. He is the sole focal human subject, large size."
+      },
+      {
+        "asset_id": "warren_buffett_mascot",
+        "asset_type": "warren_buffett_mascot",
+        "subject_or_variant": "neutral_headshot",
+        "purpose": "mascot_reaction",
+        "size_category": "small",
+        "buffett_size_rule_v4": "mascot_corner_30pct",
+        "primary_subject_reference_for_sizing": "larry_fink_cutout",
+        "source_image_url": null,
+        "description_for_gemini": "In the bottom-left corner, place a photorealistic cutout of Warren Buffett with calm neutral expression — thin white hair, large glasses, gray suit — background removed, torn paper frame with beige underlay, slight -3° tilt. Render him at approximately 30% of the size of Larry Fink's cutout, clearly smaller as a corner mascot reaction character."
+      }
+    ],
+    "gemini_prompt": "Create a vertical 4:5 Instagram card news slide in the style of a physical paper scrapbook made by a US economy influencer. This is the COVER slide of a series — it must look visually distinct and arresting compared to the later slides. Background: bright cream off-white notebook paper with ONLY horizontal ruled lines, soft faded blue-gray rules about 8mm apart, NO vertical lines, NO grid pattern, subtle paper grain. Across the very top edge of the slide, render a full-width metal spiral-bound notebook binding — silver chrome evenly-spaced coils — with exactly ONE yellow wooden pencil inserted diagonally through one of the coils, tip pointing down-left. Just below the spring binding, at the top center, render the literal lowercase text 'broisinvesting' as a very small, faded pencil-gray modern sans-serif watermark — roughly half the body text size, low contrast, slightly wider letter spacing — sitting clearly above the oversized headline so it never competes with the title or main subject. No underline, no box, no @ prefix. (This handle watermark is COVER-EXCLUSIVE — never appear on any other slide.) Below that watermark, with a comfortable gap, render the oversized hero headline 'Forget The Bubble' in a classic bold newspaper serif typeface, deep black ink, extra large and dominant, taking up roughly a quarter of the slide height. Under the word 'Bubble' draw a hand-drawn red marker underline. No subtitle. No body text — this is a minimal cover. In the middle center, place a photorealistic cutout of Larry Fink (BlackRock CEO) — older man with glasses, dark suit — background removed, torn paper edge with tan-beige underlay, slight tilt. He is the sole focal human subject, rendered large. In the bottom-left corner, place a photorealistic cutout of Warren Buffett with a calm neutral expression — thin white hair, large glasses, gray suit — background removed, torn paper frame with beige underlay, slight -3° tilt. Render him at approximately 30% of the size of Larry Fink's cutout, clearly smaller as a corner mascot reaction character. Composition uses about 42% whitespace; elements are slightly rotated -3° to +3° for an authentic handmade scrapbook feel. Do not render any JSON keys, hex codes, pixel values, font name literals, or citation tags as visible text. No grid lines. No binder clip. No 3D Memoji. No Unicode emoji.",
+    "quality_checklist_passed": {
+      "master_prompt_complete": true,
+      "leakage_scan_passed": true,
+      "english_only": true,
+      "cover_exclusive_tokens_correctly_applied": true,
+      "headline_word_count_valid": true,
+      "body_blocks_max_2": true,
+      "body_font_is_roboto_like": true,
+      "headline_font_is_newspaper_serif": true,
+      "light_theme_horizontal_only_no_grid": true,
+      "no_binder_clip": true,
+      "warren_buffett_mascot_included_if_non_cta": true,
+      "no_3d_memoji": true,
+      "no_unicode_emoji_in_text": true,
+      "seed_7842": true,
+      "v4_buffett_size_rule_verified": true,
+      "v4_t1_data_attestation_present": true,
+      "v4_acronym_gloss_format_valid": true,
+      "v4_batch_metadata_set": true,
+      "v4_account_handle_watermark_hook_only": true
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "v": "4.9.1",
+  "post_id": "palantir_bull_bear_20260511",
+  "topic_slug": "PLTR",
+  "slide_number": 2,
+  "total_slides": 8,
+  "slide_role": "DEFINITION",
+  "theme": "corkboard_scrapbook_newspaper",
+  "narrative_beat": "기",
+  "narrative_connector_category": "추가",
+
+  "topic_representative_identity_v4_7": "Alex Karp",
+  "topic_mascot_identity_v4_5": "Alex Karp",
+  "topic_mascot_inclusion": false,
+  "_mascot_reason_v4_9_1": "User decision — mascot removed from S2. Central newspaper clipping of real Karp interview photo carries the persona; mascot frequency rebalanced to other slides.",
+
+  "meme_inclusion": false,
+  "prev_carryover": "Slide 1 asked 'Why?' — slide 2 starts with the simplest answer: who actually runs this thing?",
+
+  "batch_metadata": {
+    "batch_id": 2,
+    "batch_type": "body_pair",
+    "batch_size": 2,
+    "position_in_batch": 1
+  },
+
+  "research_provenance": {
+    "data_sources_used": [
+      {"agent": "agent_3", "source": "Wikipedia — Alex Karp biography", "url": "https://en.wikipedia.org/wiki/Alex_Karp", "date": "2026-05-11"},
+      {"agent": "agent_3", "source": "Quartr — Karp unconventional CEO profile, Western-democracy mission framing", "url": "https://quartr.com/insights/business-philosophy/alex-karp-the-unconventional-tech-visionary", "date": "2026-05-11"},
+      {"agent": "agent_3", "source": "Truthout — Palantir contracts with ICE and Israeli military", "url": "https://truthout.org/articles/organizers-are-demanding-palantir-drop-contracts-with-ice-and-israeli-military/", "date": "2026-03-01"},
+      {"agent": "agent_3", "source": "SECForm4 — Karp insider sales $2.2B over 3 years", "url": "https://www.secform4.com/insider-trading/1823951.htm", "date": "2026-02-20"}
+    ],
+    "data_freshness_attestation": {
+      "t1_numbers_on_this_slide": 0,
+      "indicator_releases_on_this_slide": 0,
+      "unrestricted_context_elements": 3,
+      "reference_close_date": "2026-05-08"
+    },
+    "overall_research_quality": 0.92,
+    "fact_checked": true,
+    "numerical_claims_verified_by_agent_5": true
+  },
+
+  "image_generation_target": "gemini-2.5-flash-image",
+  "output_specification": {
+    "aspect_ratio": "4:5",
+    "resolution": "1080x1350",
+    "format": "PNG",
+    "seed": 7842,
+    "negative_prompt": "do not render JSON keys, field names, hex codes, pixel values, font name literals, COLOR NAMES (no 'apricot', no 'apricot peach', no 'mint', no 'mint green', no 'mustard', no 'mustard yellow', no 'powder blue', no 'peach', no 'green', no 'yellow' rendered as visible text on or above the stickers — color is purely a visual property, never a printed label). ABSOLUTELY ZERO CITATION OR REFERENCE MARKERS ANYWHERE IN THE IMAGE — no [cite:1], no [cite:2], no [cite_start], no [cite_end], no [cite], no [CITE], no [1], no [2], no [3], no any bracketed number, no [^1], no [^2], no (cite:X), no (citation), no (ref:X), no (1), no (2), no ^1, no ^2, no superscript footnote numbers, no 'cite 1', no 'ref 1', no 'Source:', no 'Ref:', no 'Citation:', no URLs as visible text, no footnote markers of any kind. The rendered slide must be 100% free of any citation/reference/footnote indicator. ABSOLUTELY NO rotation or angle markings rendered as visible text — no degree symbols, no '-4°', no 'tilt:X', no degree marks of any kind. Tilts are visual only. ABSOLUTELY NO acronyms or abbreviations rendered as visible text — no 'PhD', no 'JD', no 'CIA', no 'ICE', no 'NHS', no 'NH', no any acronym. Use full plain English only ('immigration agency' not 'ICE'). NO ACT LABEL on this slide — no 'ACT 1 · THE PERSON', no 'ACT 1', no 'ACT 2', no any ACT chapter label anywhere on the slide (v4.9.1 rule — ACT labels are deprecated). NO MASCOT on this slide — no Funko Pop mascot, no small corner mascot, no cartoon Karp anywhere. The central newspaper clipping is the only place Karp's face appears, and it is a real photograph inside the clipping. ABSOLUTELY NO polaroid frames anywhere on this slide — polaroid frames are slide-1 only. The central Karp portrait is a NEWSPAPER CLIPPING. The three side elements are pastel sticker labels — NOT polaroid cards. no Unicode emoji. no 3D Memoji, no chibi cartoon. no neon green/pink/purple. no gradient backgrounds. no drop shadows on text. no Korean/Chinese/Japanese text. no page counter. no notebook spring/pencil/binder clip — corkboard only. no 'broisinvesting' watermark — slide 1 exclusive. no grid paper. The Karp portrait inside the newspaper clipping must be a DIFFERENT photograph from slide 1 — show him in interview/conference context (speaking with hand gesture, side-angle, or microphone visible), NOT the front-facing studio chest-up shot used in slide 1."
+  },
+
+  "cover_exclusive_tokens_applied": {
+    "broisinvesting_handle_top_center": false,
+    "central_representative_photo_polaroid": false,
+    "company_close_stamp_present": false,
+    "three_pin_cards_present": false,
+    "mascot_forbidden_on_hook": false
+  },
+
+  "text_to_render": {
+    "account_handle_watermark": null,
+    "headline": "Who's The CEO?",
+    "subtitle": null,
+    "scrapbook_elements": [
+      {
+        "element_id": "newspaper_clipping_center",
+        "type": "newspaper_clipping",
+        "name_above_photo": "Alex Karp",
+        "title_under_name": "CEO of Palantir",
+        "byline_inside_clipping": null,
+        "photo_caption_under_image": null
+      },
+      {
+        "element_id": "pentagon_building_cutout",
+        "type": "raw_building_cutout",
+        "subject": "Pentagon building only, fully background-removed, no card frame, no caption, no pin",
+        "caption_under_card": null
+      },
+      {
+        "element_id": "trait_card_philosopher_mind",
+        "type": "sticker_label_trait",
+        "trait_title": "PHILOSOPHER MIND",
+        "trait_personal_caption": "Studied philosophy in Germany."
+      },
+      {
+        "element_id": "trait_card_army_deal",
+        "type": "sticker_label_trait",
+        "trait_title": "$10B ARMY DEAL",
+        "trait_personal_caption": "Signed it with the U.S. Pentagon."
+      },
+      {
+        "element_id": "trait_card_top_paid",
+        "type": "sticker_label_trait",
+        "trait_title": "TOP-PAID CEO",
+        "trait_personal_caption": "Earned $6.8 billion in 2024."
+      }
+    ],
+    "labels_on_visuals": [],
+    "cta_line": null
+  },
+
+  "styling_spec": {
+    "headline_style": {
+      "font_character": "classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel, very large hero headline",
+      "size_hint": "single-line oversized headline (~24% slide height) at top, dominant",
+      "case": "Title Case",
+      "decoration": {"type": "red_underline_handdrawn", "target_word": "CEO"}
+    },
+    "newspaper_clipping_style": {
+      "paper": "aged cream newsprint with slightly yellowed torn edges, faint horizontal newsprint texture",
+      "name_above_photo_font": "bold serif name in deep black ink, sitting directly above the photograph, like a magazine portrait label",
+      "title_under_name_font": "small clean sans-serif in muted sepia gray, all caps, wide letter spacing, sitting just below the name"
+    },
+    "trait_sticker_style": {
+      "_v4_9_1_new": true,
+      "shape": "small slightly-uneven rectangle, hand-cut sticker feel, soft drop shadow",
+      "colors": "muted pastel palette — apricot peach, mint green, mustard yellow (one per sticker for visual variety)",
+      "trait_title_font": "classic bold newspaper serif extra-bold, deep black or burnt-sienna red, dominant on the sticker",
+      "company_link_font": "clean modern sans-serif, medium weight, small caption underneath the title, deep black ink"
+    }
+  },
+
+  "background_spec": {
+    "theme_id": "corkboard_scrapbook_newspaper",
+    "base_color_meaning": "warm Kraft-brown corkboard",
+    "texture_description": "natural cork bulletin board with visible grain and small pin holes",
+    "ruling_style": "none",
+    "paper_texture_level": "strong",
+    "prompt_description_for_gemini": "warm Kraft-brown natural cork bulletin board fills the slide with visible cork grain and small pin holes."
+  },
+
+  "layout_spec": {
+    "top_element": "push_pin",
+    "zone_allocation": {
+      "top_center": ["headline_one_line"],
+      "middle_left": "newspaper_clipping_center",
+      "bottom_left": "pentagon_building_cutout",
+      "middle_right_top": "trait_card_philosopher_mind",
+      "middle_right_middle": "trait_card_army_deal",
+      "middle_right_bottom": "trait_card_top_paid"
+    },
+    "topic_mascot_placement_v4_7_1": {"case": "not_present"},
+    "acronym_gloss_placements": [],
+    "z_index_stack": ["background", "newspaper_clipping_center", "trait_stickers", "headline"],
+    "element_rotations": [
+      {"element_id": "newspaper_clipping_center", "rotation_deg": -2},
+      {"element_id": "pentagon_building_cutout", "rotation_deg": -3},
+      {"element_id": "trait_card_philosopher_mind", "rotation_deg": 3},
+      {"element_id": "trait_card_army_deal", "rotation_deg": -2},
+      {"element_id": "trait_card_top_paid", "rotation_deg": 4}
+    ],
+    "white_space_percent": 14,
+    "headline_height_percent_of_slide": 24,
+    "focal_point_zone": "middle_center"
+  },
+
+  "visual_elements": [
+    {
+      "asset_id": "newspaper_clipping_center",
+      "asset_type": "newspaper_clipping_aesthetic",
+      "subject_or_variant": "torn newspaper clipping containing a DIFFERENT real photo of Alex Karp (interview/conference)",
+      "purpose": "central_main_subject_via_newsclipping",
+      "size_category": "large",
+      "description_for_gemini": "LEFT SIDE of the slide, MIDDLE-LEFT (compact, leaving plenty of room for three large trait stickers on the right), a small torn aged-newsprint clipping pinned to the corkboard with one red push-pin near the top edge, tilted slightly counter-clockwise (visual tilt only). The clipping is COMPACT — about 32% slide width and 42% slide height (deliberately smaller than the right-side trait stickers combined). Cream newsprint with slightly yellowed and frayed torn edges and faint horizontal newsprint texture. INSIDE the clipping at the TOP, directly above the photograph, in bold serif deep-black ink (magazine portrait label feel): 'Alex Karp'. Immediately below the name, smaller, in clean sans-serif muted sepia gray all caps with wide letter spacing: 'CEO OF PALANTIR'. Below the name and title labels, a photograph fills the rest of the clipping: a DIFFERENT real photograph of Alex Karp from slide 1 — show him in an INTERVIEW or CONFERENCE setting (side-angle or three-quarter angle, hand gesturing mid-speech, microphone visible, or seated on a panel stage). Same recognizable features as slide 1 (wild gray curly afro hair, vintage tortoise-shell glasses) so viewers know it is the same person, but the pose and context are clearly different from the slide-1 chest-up studio portrait — this should look like a real photojournalism shot. NO byline, NO 'Reuters · Davos coverage', NO caption under the photo — only the name above the photo and the title under the name."
+    },
+    {
+      "asset_id": "pentagon_building_cutout",
+      "asset_type": "icon",
+      "subject_or_variant": "raw cut-out of the real U.S. Pentagon building, no card frame, no caption, no pin",
+      "purpose": "bare_building_cutout_on_corkboard",
+      "size_category": "small",
+      "description_for_gemini": "BOTTOM-LEFT of the slide, directly below the newspaper clipping, place ONLY the photorealistic aerial image of the real U.S. Pentagon building — the iconic five-sided concrete headquarters with its central courtyard, photographed from above in clear daylight. The image is FULLY BACKGROUND-REMOVED (no sky, no surrounding grounds, no roads — only the Pentagon building itself as a clean cut-out). NO white photo card frame, NO border, NO push-pin, NO caption, NO label, NO text of any kind. The building sits directly on the cork surface like a paper cut-out pasted on the board. The cut-out is about 26% slide width and 18% slide height. Tilted slightly counter-clockwise. Visual tilt only — no degree numbers."
+    },
+    {
+      "asset_id": "trait_card_philosopher_mind",
+      "asset_type": "stat_card",
+      "subject_or_variant": "warm-peach pastel sticker — Karp personal trait #1: philosopher mind",
+      "purpose": "ceo_personal_trait_philosopher_mind",
+      "size_category": "small",
+      "description_for_gemini": "RIGHT SIDE of the slide, upper-right area, a LARGE pastel sticker rectangle in a warm peach tone (hand-cut sticker feel, soft drop shadow on cork), about 55% slide width and 20% slide height. Tilted slightly clockwise. Inside, ONLY two pieces of text appear (no color name printed anywhere): a bold dominant title in classic newspaper serif extra-bold, deep black, all caps: 'PHILOSOPHER MIND'. Below the title, one short clean medium sans-serif caption line: 'Studied philosophy in Germany.' Do NOT print the word 'peach', 'apricot', or any color label on the sticker. Visual tilt only — no degree numbers."
+    },
+    {
+      "asset_id": "trait_card_army_deal",
+      "asset_type": "stat_card",
+      "subject_or_variant": "soft-mint pastel sticker — Karp achievement #2: $10B Pentagon deal",
+      "purpose": "ceo_achievement_army_deal",
+      "size_category": "small",
+      "description_for_gemini": "RIGHT SIDE of the slide, middle-right area (just below the previous sticker), a LARGE pastel sticker rectangle in a soft mint tone, about 55% slide width and 20% slide height. Hand-cut feel, soft drop shadow, tilted slightly counter-clockwise. Inside, ONLY two pieces of text appear: bold dominant title in classic newspaper serif extra-bold, all caps, with the dollar figure in burnt-sienna RED for emphasis: '$10B ARMY DEAL'. Below, one short caption line in clean medium sans-serif, deep black: 'Signed it with the U.S. Pentagon.' Do NOT print the word 'mint', 'green', or any color name. Visual tilt only."
+    },
+    {
+      "asset_id": "trait_card_top_paid",
+      "asset_type": "stat_card",
+      "subject_or_variant": "warm-mustard pastel sticker — Karp achievement #3: top-paid US CEO 2024",
+      "purpose": "ceo_achievement_top_paid",
+      "size_category": "small",
+      "description_for_gemini": "RIGHT SIDE of the slide, lower-right area (below the army-deal sticker), a LARGE pastel sticker rectangle in a warm mustard tone, about 55% slide width and 20% slide height. Hand-cut feel, soft drop shadow, tilted slightly clockwise. Inside, ONLY two pieces of text appear: bold dominant title in classic newspaper serif extra-bold, deep black, all caps: 'TOP-PAID CEO'. Below, one short caption line in clean medium sans-serif: 'Earned $6.8 billion in 2024.' The figure '$6.8 billion' is bold burnt-sienna red. Do NOT print the word 'mustard', 'yellow', or any color name. Visual tilt only."
+    }
+  ],
+
+  "scrapbook_treatment": {
+    "paper_underlays": [
+      {"element_id": "newspaper_clipping_center", "underlay_color_meaning": "aged cream newsprint with frayed torn edges"},
+      {"element_id": "trait_card_philosopher_mind", "underlay_color_meaning": "warm peach pastel sticker"},
+      {"element_id": "trait_card_army_deal", "underlay_color_meaning": "soft mint pastel sticker"},
+      {"element_id": "trait_card_top_paid", "underlay_color_meaning": "warm mustard pastel sticker"}
+    ],
+    "torn_edges_applied_to": ["newspaper_clipping_center"],
+    "decorative_props": [
+      {"prop_id": "red_underline", "placement": "under word CEO in headline"},
+    ]
+  },
+
+  "gemini_prompt": "CRITICAL CONSTRAINT — This image MUST contain ZERO citation markers, footnote numbers, bracketed digits, 'cite' tags, '[1]', '[2]', '[cite:1]', '[cite_start]', '[cite_end]', '(1)', '(cite)', '^1', 'Source:', 'Ref:', or ANY citation/reference/footnote indicator of any kind anywhere in the rendered slide text. If any such marker appears in the output, the image is a failure. Read this constraint twice before generating. Create a vertical 4:5 Instagram card-news body slide in the broisinvesting style — a corkboard with a SCRAPBOOK-NEWSPAPER feel that is visually DIFFERENT from slide 1 (no polaroid frames here). Background: warm Kraft-brown natural cork bulletin board with visible cork grain and small pin holes. NO broisinvesting watermark. NO page counter. NO grid paper. NO 'ACT' chapter label anywhere (deprecated). NO MASCOT anywhere on the slide. TOP-CENTER (dominant), a single-line oversized hero headline 'Who's The CEO?' in classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel, Title Case, about 24% slide height — very large and arresting. Under the word 'CEO' draw a hand-drawn burnt-sienna red marker underline. LEFT SIDE TOP HALF (middle-left of the slide, compact, leaving most of the right for the three large stickers) — a TORN NEWSPAPER CLIPPING (NOT a polaroid; polaroids are slide-1 only) deliberately SMALL at about 32% slide width and 42% slide height, pinned to the corkboard with one red push-pin near the top, tilted slightly counter-clockwise. Aged cream newsprint with slightly yellowed and frayed torn edges and faint horizontal newsprint texture. INSIDE the clipping at the TOP, directly above the photograph, in bold serif deep-black ink (magazine portrait label feel): 'Alex Karp'. Immediately below the name, smaller, in clean sans-serif muted sepia gray all caps with wide letter spacing: 'CEO OF PALANTIR'. Below the name and title labels, a photograph fills the rest of the clipping — a REAL photograph of Alex Karp that is CLEARLY DIFFERENT from slide 1: show him in an INTERVIEW or CONFERENCE setting (side-angle or three-quarter angle, hand gesturing mid-speech, microphone visible, or seated on a panel stage). Same recognizable features (wild gray curly afro hair, vintage tortoise-shell glasses) so viewers know it is the same person, but the pose and context are clearly different from the slide-1 chest-up studio portrait — this looks like a real photojournalism shot. NO byline. NO caption under the photo — only the name above the photo and the title under the name. LEFT SIDE BOTTOM (directly below the newspaper clipping, in the bottom-left corner area), place ONLY the photorealistic aerial image of the real U.S. PENTAGON BUILDING — the iconic five-sided concrete headquarters with its central courtyard, shot from above in clear daylight. The image is FULLY BACKGROUND-REMOVED — only the Pentagon building itself as a clean cut-out, no sky, no surrounding ground, no roads. NO white photo card frame, NO border, NO push-pin, NO caption, NO label, NO text on or around it. The building cut-out sits directly on the cork surface as if pasted onto the board. About 26% slide width and 18% slide height, tilted slightly counter-clockwise. RIGHT SIDE OF THE SLIDE — three LARGE sticker labels stacked vertically about KARP'S PERSONAL TRAITS (the man himself, not the company), each a slightly-uneven hand-cut pastel sticker rectangle with soft drop shadow on cork. Each sticker is LARGE — about 55% slide width and 20% slide height — visibly bigger than the left-side newspaper clipping. Each tilted in a slightly different small direction. ONLY two pieces of text appear inside each sticker: a bold title (newspaper serif extra-bold, deep black, all caps) and one short caption line (clean medium sans-serif, deep black). Color names like 'peach', 'mint', 'mustard', 'apricot', 'yellow', 'green', 'blue' are NEVER printed on the stickers — color is only a visual property of the sticker paper itself, never a label. STICKER 1 (upper-right, warm peach tone, tilted slightly clockwise) — title 'PHILOSOPHER MIND' — caption 'Studied philosophy in Germany.' STICKER 2 (middle-right, soft mint tone, tilted slightly counter-clockwise) — title '$10B ARMY DEAL' (with the dollar figure '$10B' in burnt-sienna RED for emphasis) — caption 'Signed it with the U.S. Pentagon.' STICKER 3 (lower-right, warm mustard tone, tilted slightly clockwise) — title 'TOP-PAID CEO' (deep black) — caption 'Earned $6.8 billion in 2024.' with the figure '$6.8 billion' bold burnt-sienna red. NO bottom conclusion line on this slide. NO mascot anywhere. NO 'ACT' label anywhere. Composition: about 14% open cork whitespace, elements have casual handmade tilts in small varying directions. ABSOLUTELY NO polaroid frames anywhere on this slide. ABSOLUTELY NO acronyms or abbreviations rendered as visible text — no 'PhD', no 'CIA', no 'ICE', no 'NHS', no any acronym. Use full plain English only — say 'immigration agency' not 'ICE'. ALL TILTS ARE PURELY VISUAL — do NOT print any degree symbols, numeric tilt values, angle labels, or rotation text anywhere on the image. ABSOLUTELY DO NOT render any JSON keys, hex codes, pixel values, font name literals, citation tags, footnote markers, square-bracketed numbers, or cite references as visible text. No Unicode emoji. No 3D Memoji or chibi cartoons. No notebook spring, no pencil, no binder clip — this is a corkboard. No page counter. No Korean, Chinese, or Japanese text. No 'broisinvesting' watermark — that is exclusive to slide 1. FINAL CHECK — before finalizing the image, verify there are ZERO citation markers, ZERO bracketed numbers, ZERO '[cite' patterns, ZERO 'cite_start' or 'cite_end' tags, ZERO footnote symbols. If even one such marker appears in the rendered text, the output is invalid. Generate the image free of any reference/citation/footnote indicator.",
+
+  "quality_checklist_passed": {
+    "master_prompt_complete": true,
+    "english_only": true,
+    "no_3d_memoji": true,
+    "no_unicode_emoji_in_text": true,
+    "seed_7842": true,
+    "v4_t1_data_attestation_present": true,
+    "v4_batch_metadata_set": true,
+    "v4_account_handle_watermark_hook_only": true,
+    "v4_6_no_page_counter": true,
+    "v4_6_2_citation_zero_in_negative_prompt": true,
+    "v4_7_angle_rotation_zero_in_negative_prompt": true,
+    "v4_8_headline_short": true,
+    "v4_9_a_text_minimalism": true,
+    "v4_9_b_no_acronyms_at_all": true,
+    "v4_9_1_no_act_label": true,
+    "v4_9_1_mascot_removed_from_s2": true,
+    "s2_three_ceo_traits_linked_to_company": true,
+    "s2_visually_distinct_from_s1": true,
+    "s2_uses_different_karp_photo": true,
+    "s2_no_bottom_conclusion_line": true
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "schema_version": "4.0",
+  "_note": "v4.0에서는 각 에이전트의 상세 스키마가 /agents/{agent}.md 에 있습니다. 이 파일은 에이전트 간 인터페이스(입출력)를 빠르게 참조하기 위한 요약입니다. 전체 스펙은 개별 MD 파일을 참조하세요.",
+  "_changelog_from_3.2": [
+    "Agent count: 11 → 12 (Agent 12 CTA Report Builder added in Layer 5)",
+    "Orchestrator (Agent 0) expanded: batch pacing, acronym registry, T-1 rule injection",
+    "Research agents: data_freshness_attestation field required",
+    "Agent 4: cta_pdf_chart_candidates_v4 field added",
+    "Agent 5: data_freshness_audit object added to output",
+    "Agent 8: buffett_size_rule_v4 and primary_subject_reference_for_sizing fields",
+    "Agent 10: buffett_placement_v4 and acronym_gloss_placements fields",
+    "Agent 11: quality_checklist_passed with v4_* audit fields",
+    "Agent 12: NEW — CTA Report Builder with pdf_content_manifest"
+  ],
+
+  "layers": {
+    "layer_0_control": ["agent_0_orchestrator"],
+    "layer_1_research_parallel": [
+      "agent_1_us_economy_analyst",
+      "agent_2_us_politics_analyst",
+      "agent_3_us_stock_market_analyst",
+      "agent_4_chart_data_analyst"
+    ],
+    "layer_2_verification": ["agent_5_validator"],
+    "layer_3_content_sequential": [
+      "agent_6_body_writer",
+      "agent_7_title_writer",
+      "agent_8_visual_curator"
+    ],
+    "layer_4_design": [
+      "agent_9_background_designer",
+      "agent_10_layout_composer",
+      "agent_11_final_assembler"
+    ],
+    "layer_5_deliverable_NEW_v4": ["agent_12_cta_report_builder"]
+  },
+
+  "reflection_rounds": {
+    "agent_0_orchestrator": 0,
+    "agent_1_us_economy_analyst": 1,
+    "agent_2_us_politics_analyst": 1,
+    "agent_3_us_stock_market_analyst": 1,
+    "agent_4_chart_data_analyst": 1,
+    "agent_5_validator": 2,
+    "agent_6_body_writer": 2,
+    "agent_7_title_writer": 1,
+    "agent_8_visual_curator": 1,
+    "agent_9_background_designer": 1,
+    "agent_10_layout_composer": 1,
+    "agent_11_final_assembler": 0,
+    "agent_12_cta_report_builder": 1
+  },
+
+  "agents": {
+    "agent_0_orchestrator": {
+      "layer": "control",
+      "md_file": "agents/00_orchestrator.md",
+      "input": {
+        "user_topic": "string",
+        "output_preferences": {
+          "slide_count_preference": "int or 'auto'",
+          "tone_intensity": "mild|standard|aggressive",
+          "cta_reward_type": "1page_pdf_report"
+        }
+      },
+      "output": {
+        "batches": "array of batch objects",
+        "cta_report_pdf_path": "string",
+        "acronym_registry": "object",
+        "final_manifest": "object"
+      },
+      "key_responsibilities_v4": [
+        "batch_pacing: cover_solo + body_pair + cta_with_pdf",
+        "agent_12_trigger: called when CTA slide is generated",
+        "acronym_registry: post-wide deduplication",
+        "t1_rule_injection: passes MANDATORY_DATA_FRESHNESS_RULE_v4.0 to research agents",
+        "hitl_management: CP1 through CP4"
+      ]
+    },
+
+    "agent_1_us_economy_analyst": {
+      "layer": 1,
+      "md_file": "agents/01_us_economy_analyst.md",
+      "parallel_with": ["agent_2", "agent_3", "agent_4"],
+      "input": "user_topic + MANDATORY_DATA_FRESHNESS_RULE_v4.0",
+      "output_key_fields": [
+        "data_freshness_attestation",
+        "key_findings (each with release_or_close_date)",
+        "narrative_hooks",
+        "confidence"
+      ],
+      "v4_requirements": [
+        "every metric must have release_or_close_date",
+        "t1_strict_categories for numerical data",
+        "cross_verified_by minimum 2 sources"
+      ]
+    },
+
+    "agent_2_us_politics_analyst": {
+      "layer": 1,
+      "md_file": "agents/02_us_politics_analyst.md",
+      "input": "user_topic",
+      "output_key_fields": [
+        "key_findings (each with date + still_in_effect_as_of_today)",
+        "political_actors",
+        "narrative_hooks"
+      ],
+      "v4_requirements": [
+        "news/policy: no date restriction if source is credible (tier 1-2)",
+        "still_in_effect_as_of_today must be verified",
+        "primary gov sources preferred"
+      ]
+    },
+
+    "agent_3_us_stock_market_analyst": {
+      "layer": 1,
+      "md_file": "agents/03_us_stock_market_analyst.md",
+      "input": "user_topic + MANDATORY_DATA_FRESHNESS_RULE_v4.0",
+      "output_key_fields": [
+        "data_freshness_attestation",
+        "companies_involved (each with close_date)",
+        "sector_trends",
+        "market_sentiment_indicators",
+        "narrative_hooks"
+      ],
+      "v4_requirements": [
+        "STRICTEST t1 rule application",
+        "intraday prices forbidden",
+        "reference_close_date in attestation mandatory"
+      ]
+    },
+
+    "agent_4_chart_data_analyst": {
+      "layer": 1,
+      "md_file": "agents/04_chart_data_analyst.md",
+      "input": "user_topic + research_bundle_preview",
+      "output_key_fields": [
+        "visualizable_data",
+        "recommended_3_visuals_for_slides",
+        "cta_pdf_chart_candidates_v4"
+      ],
+      "v4_requirements": [
+        "cta_pdf_chart_candidates_v4.primary and .secondary required",
+        "each viz has data_date_range + freshness_category",
+        "visual_impact_score >= 0.7 for primary"
+      ]
+    },
+
+    "agent_5_validator": {
+      "layer": 2,
+      "md_file": "agents/05_validator.md",
+      "reflection_rounds": 2,
+      "input": "output of agents 1-4",
+      "output_key_fields": [
+        "verified_findings (with credibility_score, t1_rule_passed)",
+        "rejected_findings (with reason)",
+        "data_freshness_audit",
+        "recommend_hitl_approval",
+        "trigger_research_rerun"
+      ],
+      "v4_requirements": [
+        "round_1_includes t1_compliance_check",
+        "rejection_reasons include: t1_violation, stale_data, tier3_source_only",
+        "data_freshness_audit must quantify t1_verified vs t1_rejected"
+      ]
+    },
+
+    "agent_6_body_writer": {
+      "layer": 3,
+      "md_file": "agents/06_body_writer.md",
+      "reflection_rounds": 2,
+      "input": "verified_research + slide_role + narrative_arc",
+      "output_key_fields": [
+        "body_blocks (max 2, bullets 2-5 words, paragraphs 1 sentence max 12 words)",
+        "_styling_spec_for_agent_11 (body_font_character='modern clean sans-serif, Roboto-like')",
+        "acronym_report",
+        "unifier_report"
+      ],
+      "v4_requirements": [
+        "detect acronyms (2-5 uppercase) and report to Orchestrator",
+        "check against common_whitelist before reporting",
+        "hook_slide: body_blocks minimal or empty"
+      ]
+    },
+
+    "agent_7_title_writer": {
+      "layer": 3,
+      "md_file": "agents/07_title_writer.md",
+      "input": "body_blocks_n + slide_role_n",
+      "output_key_fields": [
+        "headline (2-5 words, Title Case)",
+        "subtitle (6-12 words or null)",
+        "small_caps_label",
+        "_styling_spec_for_agent_11"
+      ],
+      "v4_requirements": [
+        "headline size_hint: HOOK=oversized 25%+, non-HOOK=12-18%",
+        "subtitle size_hint: ~1.1x body",
+        "HOOK subtitle null by default"
+      ]
+    },
+
+    "agent_8_visual_curator": {
+      "layer": 3,
+      "md_file": "agents/08_visual_curator.md",
+      "input": "slide_role + body + title",
+      "output_key_fields": [
+        "visual_assets (5-8 items)",
+        "buffett_role_classification",
+        "most_similar_original_slide"
+      ],
+      "v4_requirements": [
+        "buffett_size_rule_v4 classification mandatory",
+        "primary_subject_reference_for_sizing required when mascot_corner",
+        "description_for_gemini includes 30% phrasing when applicable"
+      ]
+    },
+
+    "agent_9_background_designer": {
+      "layer": 4,
+      "md_file": "agents/09_background_designer.md",
+      "input": "slide_role + arc + previous_themes",
+      "output_key_fields": [
+        "theme_id",
+        "background_spec.prompt_description_for_gemini",
+        "cover_exclusive_tokens_applied"
+      ],
+      "v4_requirements": [
+        "light theme = light_lined (not light_grid)",
+        "ruling_style = horizontal_only for light_lined",
+        "cover_exclusive_tokens only when slide_role == HOOK",
+        "account_handle_watermark token = true on HOOK and false on every non-HOOK slide"
+      ]
+    },
+
+    "agent_10_layout_composer": {
+      "layer": 4,
+      "md_file": "agents/10_layout_composer.md",
+      "input": "all previous outputs for slide_n + acronym_registry",
+      "output_key_fields": [
+        "top_element",
+        "zone_allocation",
+        "buffett_placement_v4",
+        "acronym_gloss_placements",
+        "white_space_percent",
+        "headline_height_percent_of_slide"
+      ],
+      "v4_requirements": [
+        "HOOK: top_element=notebook_spring_with_pencil, non-HOOK: tape/pin/sticker",
+        "buffett_placement_v4.size_directive_for_prompt required",
+        "acronym_gloss_placements: place in empty corners, max 2",
+        "gloss format: '* ABC = Full Name'",
+        "HOOK: account_handle_watermark object populated with literal_text='broisinvesting' at top_center (below spring, above headline); every non-HOOK slide: account_handle_watermark=null"
+      ]
+    },
+
+    "agent_11_final_assembler": {
+      "layer": 4,
+      "md_file": "agents/11_final_assembler.md",
+      "reflection_rounds": 0,
+      "input": "outputs of agents 6-10 for slide_n",
+      "output_key_fields": [
+        "slide_n.json (complete Gemini JSON)",
+        "quality_checklist_passed"
+      ],
+      "v4_requirements": [
+        "quality_checklist_passed includes v4_buffett_size_rule_verified, v4_t1_data_attestation_present, v4_acronym_gloss_format_valid, v4_batch_metadata_set, v4_account_handle_watermark_hook_only",
+        "batch_metadata object populated",
+        "gemini_prompt single natural-language paragraph, no JSON/hex/px",
+        "HOOK: gemini_prompt contains literal text 'broisinvesting' exactly once (handle watermark instruction). non-HOOK: 'broisinvesting' literal must not appear anywhere in gemini_prompt; non-HOOK negative_prompt must include 'no broisinvesting handle, no account watermark'."
+      ]
+    },
+
+    "agent_12_cta_report_builder": {
+      "layer": 5,
+      "md_file": "agents/12_cta_report_builder.md",
+      "status": "NEW_v4.0",
+      "reflection_rounds": 1,
+      "input": {
+        "verified_research": "from agent_5",
+        "cta_pdf_chart_candidates": "from agent_4",
+        "narrative_arc": "from orchestrator",
+        "cta_keyword": "string",
+        "post_topic": "string"
+      },
+      "output_key_fields": [
+        "pdf_filepath",
+        "pdf_content_manifest",
+        "data_freshness_attestation",
+        "page_count"
+      ],
+      "v4_requirements": [
+        "page_count == 1 strict",
+        "all numbers sourced from agent_5.verified_findings",
+        "t1 rule applies same as card news",
+        "disclaimer required",
+        "minimum 3 sources cited"
+      ]
+    }
+  },
+
+  "interface_contracts": {
+    "orchestrator_to_research_agents": {
+      "payload_includes": [
+        "user_topic",
+        "MANDATORY_DATA_FRESHNESS_RULE_v4.0",
+        "reference_date (today)",
+        "reference_close_date (T-1 calculated)"
+      ]
+    },
+    "research_to_validator": {
+      "payload": "research_bundle.json with 4 agent outputs"
+    },
+    "validator_to_orchestrator": {
+      "payload": "verified_research.json + hitl_cp1_summary"
+    },
+    "orchestrator_to_content_agents": {
+      "payload_per_slide": [
+        "verified_research",
+        "slide_role",
+        "slide_n",
+        "total_slides",
+        "narrative_arc_blueprint",
+        "acronym_registry (current state)",
+        "previous_slides_themes"
+      ]
+    },
+    "content_to_design_to_assembler": {
+      "chain": "body→title→visual→background→layout→assembler, each passes to next via slide_bundle_n"
+    },
+    "assembler_to_orchestrator": {
+      "payload": "slide_n.json (complete Gemini JSON) + batch_metadata"
+    },
+    "orchestrator_to_agent_12": {
+      "trigger": "when slide_role == CTA is completed",
+      "payload": [
+        "verified_research",
+        "cta_pdf_chart_candidates_v4",
+        "narrative_arc",
+        "cta_keyword (from CTA slide content)",
+        "post_topic"
+      ]
+    },
+    "agent_12_to_orchestrator": {
+      "payload": "cta_report.pdf + pdf_content_manifest"
+    }
+  },
+
+  "batch_structure_v4": {
+    "cover_solo": {
+      "slide_count": 1,
+      "slide_roles": ["HOOK"],
+      "hitl_cp": "CP3a"
+    },
+    "body_pair": {
+      "slide_count": 2,
+      "slide_roles": "any non-HOOK non-CTA",
+      "hitl_cp": "CP3b, CP3c, ..."
+    },
+    "body_solo_remainder": {
+      "slide_count": 1,
+      "condition": "when total body slides count is odd",
+      "hitl_cp": "CP3z"
+    },
+    "cta_with_pdf": {
+      "slide_count": 1,
+      "additional_assets": ["cta_report.pdf"],
+      "slide_roles": ["CTA"],
+      "hitl_cp": "CP3-final"
+    }
+  },
+
+  "hitl_checkpoints": {
+    "CP1": {
+      "timing": "after layer 2 (validation)",
+      "user_reviews": ["verified findings", "rejected findings", "data freshness audit"],
+      "decisions": ["approve", "rerun_research", "exclude_findings"]
+    },
+    "CP2": {
+      "timing": "after narrative arc + cta pdf outline",
+      "user_reviews": ["arc", "slide composition", "CTA PDF outline"],
+      "decisions": ["approve", "modify_arc", "adjust_composition"]
+    },
+    "CP3a_through_CP3_final": {
+      "timing": "after each batch",
+      "user_reviews": ["batch slides", "prompts preview", "CTA PDF if present"],
+      "decisions": ["approve", "modify_slide", "regenerate_slide"]
+    },
+    "CP4": {
+      "timing": "after all batches complete",
+      "user_reviews": ["full manifest", "all slides", "cta_report.pdf"],
+      "decisions": ["final_approve", "partial_revise"]
+    }
+  }
+}

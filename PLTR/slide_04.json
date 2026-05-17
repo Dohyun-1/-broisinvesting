@@ -1,0 +1,221 @@
+{
+  "v": "4.9.4",
+  "post_id": "palantir_bull_bear_20260511",
+  "topic_slug": "PLTR",
+  "slide_number": 4,
+  "total_slides": 8,
+  "slide_role": "THE_MACHINE",
+  "theme": "corkboard_pie_chart_revenue",
+  "narrative_beat": "승",
+  "narrative_connector_category": "인과",
+
+  "topic_representative_identity_v4_7": "Alex Karp",
+  "topic_mascot_identity_v4_5": "Alex Karp",
+  "topic_mascot_inclusion": true,
+  "topic_mascot_corner": "bottom-right",
+
+  "meme_inclusion": true,
+  "meme_id": "willem_dafoe_looking_up",
+  "meme_source_file_reference": "/Users/dohyun/Desktop/개인 인스타/broisinvesting/broisinvesting.md/meme/300px-Willem_Dafoe_Looking_Up.jpg",
+  "prev_carryover": "Slide 3 listed who uses Palantir. Slide 4 breaks down the actual dollars per quarter and who pays for them.",
+
+  "batch_metadata": {
+    "batch_id": 3,
+    "batch_type": "body_pair",
+    "batch_size": 2,
+    "position_in_batch": 1
+  },
+
+  "research_provenance": {
+    "data_sources_used": [
+      {"agent": "agent_3", "source": "Palantir Q1 2026 — US gov $687M (+84%), US commercial $595M (+133%), total $1.63B", "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/", "date": "2026-05-04"},
+      {"agent": "agent_3", "source": "International revenue ≈ $348M (calculated as total $1.63B − US $1.282B)", "url": "https://investors.palantir.com/files/Palantir%20-%20Q1%202026%20Business%20Update.pdf", "date": "2026-05-04"}
+    ],
+    "data_freshness_attestation": {
+      "t1_numbers_on_this_slide": 4,
+      "indicator_releases_on_this_slide": 1,
+      "unrestricted_context_elements": 0,
+      "reference_close_date": "2026-05-08"
+    },
+    "overall_research_quality": 0.95,
+    "fact_checked": true,
+    "numerical_claims_verified_by_agent_5": true
+  },
+
+  "image_generation_target": "gemini-2.5-flash-image",
+  "output_specification": {
+    "aspect_ratio": "4:5",
+    "resolution": "1080x1350",
+    "format": "PNG",
+    "seed": 7842,
+    "negative_prompt": "do not render JSON keys, field names, hex codes, pixel values, font name literals, COLOR NAMES as visible text (no 'red', 'mustard', 'yellow', 'gray', 'cream' rendered as words). ABSOLUTELY ZERO CITATION OR REFERENCE MARKERS — no [cite:1], [cite_start], [1], [^1], (1), ^1, 'Source:', 'Ref:', no bracketed numbers, no superscript footnotes, no URLs as visible text. ABSOLUTELY NO rotation/angle markings as visible text on the image. ABSOLUTELY NO acronyms — no 'US' (write 'U.S.'), no 'AI', no 'NDR'; use only full plain English. No business jargon. the mascot's face must NEVER be illustrated, painted, drawn, AI-generated, 3D Memoji, chibi, anime, or cartoon — it is ALWAYS a literal real photograph cut-out of Alex Karp's actual face. mascot body is natural cartoon-Funko-Pop proportions. Mascot pose must look natural — relaxed standing or confidently gesturing, NOT stiff, NOT awkward. Mascot is SMALL (~16% slide height), in the bottom-right corner. No 3D Memoji. No Unicode emoji as visible text. No gradient backgrounds. No drop shadows on text. No Korean/Chinese/Japanese text. No page counter. No notebook spring/pencil/binder clip — corkboard only. No 'broisinvesting' watermark — slide 1 exclusive. No polaroid frames. The pie chart must show three clearly differentiated wedge colors with clean black outlines, not 3D, not glossy — flat scrapbook illustration."
+  },
+
+  "cover_exclusive_tokens_applied": {
+    "broisinvesting_handle_top_center": false,
+    "central_representative_photo_polaroid": false,
+    "company_close_stamp_present": false,
+    "three_pin_cards_present": false,
+    "mascot_forbidden_on_hook": false
+  },
+
+  "text_to_render": {
+    "account_handle_watermark": null,
+    "headline": "Where Does The Money Come From?",
+    "subtitle": null,
+    "pie_chart_data": {
+      "title_inside_chart_line_1": "Q1 2026",
+      "title_inside_chart_line_2": "$1.63B",
+      "title_inside_chart_line_3": "vs a year ago",
+      "segments": [
+        {"label": "U.S. GOVERNMENT", "amount": "$687M", "growth": "+84% vs last year", "percent_visual": 42, "wedge_tone": "deep burnt-sienna red"},
+        {"label": "U.S. COMPANIES", "amount": "$595M", "growth": "+133% vs last year", "percent_visual": 36, "wedge_tone": "bright mustard yellow (highlighted as the explosive wedge)"},
+        {"label": "INTERNATIONAL", "amount": "$348M", "growth": "flat vs last year", "percent_visual": 22, "wedge_tone": "muted cream-gray"}
+      ]
+    },
+    "top_right_franklin_inhaling_money_meme": {
+      "concept": "Benjamin Franklin from the 100 dollar bill, head/portrait region of the bill cut into a torn scrapbook clipping, mouth opened comically wide like Kirby inhaling, sucking a stream of swirling dollar bills and coins into his mouth",
+      "no_text_inside_meme": true,
+      "label_under_meme": "Money Vacuum."
+    },
+    "meme_label_under_dafoe": "Wall Street watching.",
+    "labels_on_visuals": [],
+    "cta_line": null
+  },
+
+  "styling_spec": {
+    "headline_style": {
+      "font_character": "classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel",
+      "size_hint": "two-line headline (~16% slide height) at top center",
+      "case": "Title Case",
+      "decoration": {"type": "red_underline_handdrawn", "target_word": "Money"}
+    },
+    "pie_chart_style": {
+      "_v4_9_6_new": true,
+      "shape": "clean flat 2D donut/pie chart with clear black outlines around each wedge, scrapbook-illustration feel, NOT 3D, NOT glossy",
+      "center_text_font": "classic bold newspaper serif extra-bold, deep black, dominant in center hole",
+      "wedge_label_font": "clean bold sans-serif sitting just outside each wedge with a tiny leader line",
+      "amount_font": "classic newspaper serif extra-bold for big dollar figures",
+      "growth_font": "smaller bold sans-serif, burnt-sienna red for positive growth"
+    },
+    "trend_chart_style": {
+      "shape": "small minimal bar chart, 4 bars rising, last bar burnt-sienna red and noticeably tallest",
+      "title_font": "small caps clean sans-serif sepia gray",
+      "annotation_font": "burnt-sienna red bold sans-serif"
+    },
+    "meme_label_style": {
+      "font_character": "handwritten sepia cursive on a small torn note paper",
+      "size_hint": "approximately 1.0x body size"
+    }
+  },
+
+  "background_spec": {
+    "theme_id": "corkboard_pie_chart_revenue",
+    "base_color_meaning": "DARKER caramel-brown corkboard with subtle warm vignette (wealth/money mood)",
+    "texture_description": "deeper caramel-brown cork bulletin board, richer and more saturated than slides 1-3, faint warm vignette toward the edges",
+    "ruling_style": "none",
+    "paper_texture_level": "strong",
+    "prompt_description_for_gemini": "a DARKER, deeper caramel-brown cork bulletin board fills the slide (clearly darker and richer than the warm Kraft brown of slides 1-3, evoking a wealth/money mood), visible cork grain, slightly more saturated warm tone, soft vignette toward the edges."
+  },
+
+  "layout_spec": {
+    "top_element": "push_pin",
+    "zone_allocation": {
+      "top_center": ["headline_two_line"],
+      "top_right_corner": "franklin_inhaling_money_meme",
+      "middle_center_dominant": "revenue_pie_chart",
+      "bottom_left": "willem_dafoe_meme",
+      "bottom_right": "karp_mascot_arms_raised_cheer"
+    },
+    "topic_mascot_placement_v4_7_1": {
+      "case": "mascot_corner_small",
+      "zone": "bottom_right",
+      "size_directive_for_prompt": "mascot about 16% slide height in the bottom-right corner. CELEBRATION POSE — both arms raised straight up overhead in a 'banzai' / hooray cheering gesture, big triumphant grin. Photoreal Karp face cut-out + natural cartoon body proportions."
+    },
+    "z_index_stack": ["background", "revenue_pie_chart", "franklin_inhaling_money_meme", "willem_dafoe_meme", "headline", "karp_mascot_arms_raised_cheer"],
+    "element_rotations": [
+      {"element_id": "revenue_pie_chart", "rotation_deg": 0},
+      {"element_id": "franklin_inhaling_money_meme", "rotation_deg": -4},
+      {"element_id": "willem_dafoe_meme", "rotation_deg": -3},
+      {"element_id": "karp_mascot_arms_raised_cheer", "rotation_deg": -2}
+    ],
+    "white_space_percent": 5,
+    "headline_height_percent_of_slide": 16,
+    "focal_point_zone": "middle_center"
+  },
+
+  "visual_elements": [
+    {
+      "asset_id": "revenue_pie_chart",
+      "asset_type": "chart_annotated",
+      "subject_or_variant": "central revenue pie chart with 3 wedges, scrapbook illustration style",
+      "purpose": "central_dominant_visual",
+      "size_category": "central",
+      "description_for_gemini": "MIDDLE-CENTER of the slide — the DOMINANT visual element — a clean flat 2D donut pie chart, scrapbook-illustration style with crisp black outlines around each wedge, NOT 3D, NOT glossy. About 56% slide width and 50% slide height. Pinned to the corkboard with one red push-pin at the top, hanging dead-centered (no rotation). Three wedges (clockwise from top): WEDGE 1 = deep burnt-sienna RED, occupying about 42% of the circle, labeled outside the wedge with a tiny leader line in clean bold sans-serif (deep black): 'U.S. GOVERNMENT'. Below that label in classic newspaper serif extra-bold: '$687M'. Below that in burnt-sienna red bold sans-serif: '+84% vs last year'. WEDGE 2 = bright MUSTARD YELLOW (the highlighted explosive wedge, slightly more saturated than the others), about 36% of the circle, labeled outside: 'U.S. COMPANIES' — below '$595M' — below in even larger burnt-sienna RED bold: '+133% vs last year' with a tiny upward arrow. WEDGE 3 = muted CREAM-GRAY, about 22% of the circle, labeled outside: 'INTERNATIONAL' — below '$348M' — below in muted sepia italic: 'flat vs last year'. In the DONUT HOLE at the center of the chart, THREE stacked lines of classic newspaper serif extra-bold deep black: top line small 'Q1 2026', middle line LARGEST '$1.63B', bottom line small italic sepia 'vs a year ago'. The chart looks like a hand-cut scrapbook illustration pinned on cork. No 3D rendering, no gradient, no glossy shine."
+    },
+    {
+      "asset_id": "franklin_inhaling_money_meme",
+      "asset_type": "generated_meme_illustration",
+      "subject_or_variant": "Benjamin Franklin portrait from the United States 100 dollar bill, comically opening his mouth wide like Kirby and inhaling a swirling vortex of paper money and coins",
+      "purpose": "wealth_money_visual_metaphor_top_right",
+      "size_category": "small",
+      "description_for_gemini": "TOP-RIGHT CORNER of the slide, next to the headline, a torn scrapbook clipping about 30% slide width and 22% slide height, pinned with one red push-pin at the top, tilted slightly counter-clockwise. The clipping shows a humorous illustrated MEME composited inside the rectangular shape of a torn-out piece of the United States ONE HUNDRED DOLLAR BILL — the familiar green-and-cream Federal Reserve Note background (engraved scrollwork pattern, faint blue and red security threads, the '100' numerals in the corners) is preserved as the meme's backdrop, but most of the inner bill design is removed to make room for the gag. In the LEFT-CENTER of the clipping is Benjamin Franklin's classic engraved portrait FACE from the 100 dollar bill — clearly recognizable as the same gray-haired, long-haired, slightly smirking Franklin engraving, but ALIVE and animated for the meme. Franklin's MOUTH is opened impossibly wide in a Kirby-style cartoon inhale — a huge round black cartoon void of a mouth, like a vacuum hole — sucking inward. From the RIGHT side of the clipping a swirling VORTEX of cartoon paper money flutters and stretches toward Franklin's open mouth: multiple small green dollar bills (some clearly showing '$' or '100'), bright gold coins, and motion lines all curving and funneling into the mouth, getting smaller and more stretched as they approach the throat. Subtle cartoon wind-suction lines (concentric arcs) emphasize the inhale. The style is a hybrid — Franklin himself stays in the original engraved currency-portrait line art (so he's instantly recognizable as the bill), but the cartoon mouth, money stream, and motion lines are drawn in a clean modern cartoon style with bold outlines, evoking the iconic Kirby-inhaling-everything meme without depicting Kirby himself. NO TEXT inside the clipping (no captions, no speech bubbles, no dollar amounts as words, no signatures rendered). DIRECTLY BELOW the clipping, a tiny separate torn cream note paper pinned with one red push-pin, tilted slightly clockwise, in handwritten sepia cursive: 'Money Vacuum.' Visual tilt only — no degree symbols rendered."
+    },
+    {
+      "asset_id": "willem_dafoe_meme",
+      "asset_type": "meme_inline_real_image",
+      "subject_or_variant": "EXACT Willem Dafoe Looking Up meme — paste the source photo as-is, do not regenerate or stylize the face",
+      "purpose": "reaction_meme_corner",
+      "size_category": "small",
+      "source_image_url": "/Users/dohyun/Desktop/개인 인스타/broisinvesting/broisinvesting.md/meme/300px-Willem_Dafoe_Looking_Up.jpg",
+      "use_source_image_directly": true,
+      "must_not_regenerate_face": true,
+      "description_for_gemini": "BOTTOM-LEFT corner of the slide — PASTE THE EXACT SOURCE MEME IMAGE here as a torn magazine clipping. The source image is the well-known WILLEM DAFOE LOOKING UP meme (a real cinematic photo still of actor Willem Dafoe — close-up of his actual real face, beard, deep-set eyes, mouth slightly open, gazing UPWARD with an awestruck/astonished expression, blue-tinted cinematic lighting from the film, dark blurred background). DO NOT REDRAW, DO NOT REGENERATE, DO NOT STYLIZE, DO NOT CARTOONIFY this face — it must be the LITERAL real photograph of the actor Willem Dafoe from the actual movie still that became the internet meme. Treat the source image as a physical photo cut-out: just add slightly worn torn-magazine paper edges around it, a single red push-pin at the top, tilt the clipping a few degrees counter-clockwise. The size is about 22% slide width × 24% slide height. The face stays photoreal and unmistakably recognizable as the real Willem Dafoe. DIRECTLY BELOW the meme clipping, a small torn cream note paper pinned with one red push-pin, tilted slightly clockwise, in handwritten sepia cursive with slight slant: 'Wall Street watching.' Visual tilt only — no degree symbols rendered."
+    },
+    {
+      "asset_id": "karp_mascot_arms_raised_cheer",
+      "asset_type": "topic_mascot",
+      "subject_or_variant": "photo-collage Karp mascot, both arms raised overhead in a banzai / hooray celebration cheer",
+      "purpose": "small_corner_celebration_mascot_natural",
+      "size_category": "small",
+      "mascot_size_rule_v4_7_1": "mascot_corner_small",
+      "description_for_gemini": "BOTTOM-RIGHT corner of the slide, a SMALL photo-collage mascot of Alex Karp about 16% slide height — POSE AND PROPORTIONS MUST LOOK NATURAL AND BELIEVABLE. IMAGINE PRINTING OUT A REAL NEWS PHOTOGRAPH of Alex Karp's actual face and GLUING IT onto a small cartoon body. The HEAD is a literal real-photograph cut-out of Alex Karp's actual face — wild gray curly afro hair, vintage rectangular tortoise-shell glasses, BIG TRIUMPHANT OPEN-MOUTHED GRIN (clearly thrilled — celebrating the revenue mix, eyes lit up), head tilted slightly upward as if shouting 'yes!'. Head about 45% of total figure height (natural Funko Pop proportions — oversized but not extreme). The BODY is a simple flat-color cartoon Funko Pop body in NATURAL CELEBRATION POSE — BOTH ARMS RAISED STRAIGHT UP OVERHEAD in a 'banzai' / hooray cheering gesture, hands open with fingers spread, elbows mostly straight (a clear V-shape from shoulders), shoulders slightly lifted in excitement; wearing a dark fleece pullover and faded jeans; short proportioned cartoon legs and small cartoon shoes standing flat on the cork, feet slightly apart in a stable triumphant stance. Background removed cleanly. The pose must look LIKE A REAL PERSON CHEERING ENTHUSIASTICALLY — natural arm geometry, comfortable shoulder rotation, joyful but believable — NOT stiff, NOT chibi, NOT awkwardly tilted. If hands are visible they are also real-photo cut-outs. The face is NEVER illustrated, drawn, AI-generated, 3D Memoji, chibi, anime, or cartoon — ALWAYS a literal real photograph cut-out of the real Alex Karp. Optional small sepia cartoon celebration lines / sparkles radiating around his raised hands for character (very subtle)."
+    }
+  ],
+
+  "scrapbook_treatment": {
+    "paper_underlays": [
+      {"element_id": "franklin_inhaling_money_meme", "underlay_color_meaning": "torn piece of United States 100 dollar bill, green-and-cream Federal Reserve Note texture"},
+      {"element_id": "willem_dafoe_meme", "underlay_color_meaning": "torn magazine snippet"}
+    ],
+    "torn_edges_applied_to": ["franklin_inhaling_money_meme", "willem_dafoe_meme"],
+    "decorative_props": [
+      {"prop_id": "red_underline", "placement": "under word Money in headline"},
+      {"prop_id": "celebration_sparkles", "placement": "small sepia sparkles / motion lines radiating around Karp's raised hands"}
+    ]
+  },
+
+  "gemini_prompt": "CRITICAL CONSTRAINT — This image MUST contain ZERO citation markers, footnote numbers, bracketed digits, 'cite' tags, '[1]', '[2]', '[cite:1]', '[cite_start]', '(1)', '^1', 'Source:', 'Ref:', or ANY citation/reference indicator anywhere in the rendered text. Create a vertical 4:5 Instagram card-news body slide in the broisinvesting style — a DARKER caramel-brown corkboard featuring a clean central pie chart, a small trend bar chart in the top-right, a Willem Dafoe reaction meme in the bottom-left, and a natural-pose Karp mascot in the bottom-right. Background: a DARKER, deeper caramel-brown cork bulletin board (clearly darker and richer than slides 1-3's warm Kraft brown — wealth/money mood), visible cork grain, slightly more saturated warm tone, soft vignette toward the edges. NO broisinvesting watermark. NO page counter. NO 'ACT' label. NO polaroid frames. TOP CENTER, a two-line oversized hero headline 'Where Does The Money Come From?' in classic bold newspaper serif typeface, deep black ink, slightly distressed letterpress feel, Title Case, about 16% slide height. Under the word 'Money' draw a hand-drawn burnt-sienna red marker underline. TOP-RIGHT CORNER (next to the headline) — a torn scrapbook clipping about 30% slide width × 22% slide height, pinned with one red push-pin at the top, tilted slightly counter-clockwise. The clipping shows a humorous illustrated MEME composited inside the rectangular shape of a torn-out piece of the United States ONE HUNDRED DOLLAR BILL — the familiar green-and-cream Federal Reserve Note background (engraved scrollwork pattern, faint blue and red security threads, the '100' numerals in the corners) is preserved as the meme's backdrop, but most of the inner bill design is removed to make room for the gag. In the LEFT-CENTER of the clipping is Benjamin Franklin's classic engraved portrait FACE from the 100 dollar bill — clearly recognizable as the same gray-haired, long-haired, slightly smirking Franklin engraving, but ALIVE and animated for the meme. Franklin's MOUTH is opened impossibly wide in a Kirby-style cartoon inhale — a huge round black cartoon void of a mouth, like a vacuum hole — sucking inward. From the RIGHT side of the clipping a swirling VORTEX of cartoon paper money flutters and stretches toward Franklin's open mouth: multiple small green dollar bills (some clearly showing the symbol or the number '100'), bright gold coins, and motion lines all curving and funneling into the mouth, getting smaller and more stretched as they approach the throat. Subtle cartoon wind-suction lines (concentric arcs) emphasize the inhale. The style is a hybrid — Franklin himself stays in the original engraved currency-portrait line art (so he is instantly recognizable as the bill), but the cartoon mouth, money stream, and motion lines are drawn in a clean modern cartoon style with bold outlines, evoking the iconic Kirby-inhaling-everything meme without depicting Kirby himself. ABSOLUTELY NO TEXT inside the clipping (no captions, no speech bubbles, no dollar amounts spelled out as words, no signatures). DIRECTLY BELOW the clipping, a tiny separate torn cream note paper pinned with one red push-pin, tilted slightly clockwise, in handwritten sepia cursive: 'Money Vacuum.' MIDDLE-CENTER OF THE SLIDE — the DOMINANT visual — a clean flat 2D DONUT PIE CHART, scrapbook-illustration style with crisp black outlines around each wedge, NOT 3D, NOT glossy. About 56% slide width × 50% slide height. Pinned with one red push-pin at the top, hanging dead-centered (no rotation). THREE WEDGES (clockwise from top): WEDGE 1 = deep burnt-sienna RED, ~42% of the circle, labeled outside with a tiny leader line in clean bold sans-serif (deep black): 'U.S. GOVERNMENT'. Below in classic newspaper serif extra-bold: '$687M'. Below in burnt-sienna red bold sans-serif: '+84% vs last year'. WEDGE 2 = bright MUSTARD YELLOW (the highlighted explosive wedge, slightly more saturated than the others), ~36% of the circle, labeled outside: 'U.S. COMPANIES' — '$595M' — burnt-sienna RED bold larger figure '+133% vs last year' with a small upward arrow. WEDGE 3 = muted CREAM-GRAY, ~22% of the circle, labeled outside: 'INTERNATIONAL' — '$348M' — muted sepia italic 'flat vs last year'. In the DONUT HOLE at the center, THREE stacked lines of newspaper serif extra-bold deep black: top small 'Q1 2026', middle LARGEST '$1.63B', bottom small italic sepia 'vs a year ago'. Looks like a hand-cut scrapbook illustration pinned on cork. BOTTOM-LEFT CORNER — PASTE THE EXACT WILLEM DAFOE LOOKING UP MEME SOURCE IMAGE here as a torn magazine clipping. The source image is the well-known meme: a real cinematic photo still of actor Willem Dafoe — close-up of his actual real face, beard, deep-set eyes, mouth slightly open, gazing UPWARD with an awestruck/astonished expression, blue-tinted cinematic lighting, dark blurred background. DO NOT REDRAW, DO NOT REGENERATE, DO NOT STYLIZE, DO NOT CARTOONIFY this face — it must be the LITERAL real photograph of the actor Willem Dafoe from the actual movie still that became the internet meme, photoreal and unmistakably recognizable as the real actor. Treat the source as a physical photo cut-out: just add slightly worn torn-magazine paper edges around it, a single red push-pin at the top, tilt the clipping a few degrees counter-clockwise. Size about 22% slide width × 24% slide height. DIRECTLY BELOW on a small torn cream note paper pinned with one red push-pin, in handwritten sepia cursive: 'Wall Street watching.' BOTTOM-RIGHT CORNER — a SMALL photo-collage mascot of Alex Karp about 16% slide height — POSE AND PROPORTIONS MUST LOOK NATURAL AND BELIEVABLE. The HEAD is a literal real-photograph cut-out of Alex Karp's actual face — wild gray curly afro hair, vintage tortoise-shell glasses, BIG TRIUMPHANT OPEN-MOUTHED GRIN (clearly thrilled, eyes lit up), head tilted slightly upward as if shouting 'yes!'. Head about 45% of total figure height (natural Funko Pop proportions — oversized but not extreme). The BODY is a simple flat-color cartoon Funko Pop body in NATURAL CELEBRATION POSE — BOTH ARMS RAISED STRAIGHT UP OVERHEAD in a 'banzai' / hooray cheering gesture, hands open with fingers spread, elbows mostly straight forming a clear V-shape from the shoulders, shoulders slightly lifted in excitement; dark fleece pullover and faded jeans; short proportioned cartoon legs standing flat, feet slightly apart in a stable triumphant stance. Background removed. The pose must look LIKE A REAL PERSON CHEERING ENTHUSIASTICALLY — natural arm geometry, comfortable shoulder rotation, joyful but believable — NOT stiff, NOT chibi, NOT awkwardly tilted. If hands are visible they too are real-photo cut-outs. The face is NEVER illustrated, drawn, AI-generated, 3D Memoji, chibi, anime, or cartoon — ALWAYS a real photograph cut-out. Optional subtle sepia cartoon celebration lines / sparkles radiating around his raised hands. ABSOLUTELY NO acronyms — no 'US', no 'AI', no 'NDR' — use 'U.S.' format only. NO color names as visible text — no 'red', 'mustard', 'yellow', 'gray', 'cream' rendered as words. ALL TILTS PURELY VISUAL — no degree symbols, no numeric tilt values, no rotation text on the image. ABSOLUTELY DO NOT render JSON keys, hex codes, pixel values, font name literals, citation tags, footnote markers, square-bracketed numbers, or cite references as visible text. No Unicode emoji. No 3D Memoji. No notebook spring/pencil/binder clip — corkboard only. No page counter. No Korean/Chinese/Japanese text. No 'broisinvesting' watermark. FINAL CHECK — zero citation markers, zero bracketed numbers, zero footnote symbols.",
+
+  "quality_checklist_passed": {
+    "master_prompt_complete": true,
+    "english_only": true,
+    "no_3d_memoji": true,
+    "no_unicode_emoji_in_text": true,
+    "seed_7842": true,
+    "v4_t1_data_attestation_present": true,
+    "v4_batch_metadata_set": true,
+    "v4_account_handle_watermark_hook_only": true,
+    "v4_6_no_page_counter": true,
+    "v4_6_2_citation_zero_in_negative_prompt": true,
+    "v4_7_1_mascot_face_real_body_free": true,
+    "v4_7_1_mascot_natural_pose": true,
+    "v4_7_angle_rotation_zero_image_only": true,
+    "v4_9_a_text_minimalism": true,
+    "v4_9_b_no_acronyms_at_all": true,
+    "v4_9_1_no_act_label": true,
+    "v4_9_3_no_color_names_as_text": true,
+    "v4_9_5_meme_folder_used": true,
+    "v4_9_6_pie_chart_central_dominant": true
+  }
+}

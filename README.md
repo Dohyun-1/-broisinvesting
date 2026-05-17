@@ -99,4 +99,4 @@ See `broisinvesting.md/07_USAGE_GUIDE.md` for the full walkthrough.
 
 ## License
 
-Personal project. Content is not licensed for redistribution.
+[MIT](LICENSE) © 2026 Dohyun Ryu

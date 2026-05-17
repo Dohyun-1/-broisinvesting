@@ -1,10 +1,27 @@
 # broisinvesting
 
+[![Version](https://img.shields.io/badge/version-v4.7-blueviolet?style=flat-square)](#versions)
+[![Agents](https://img.shields.io/badge/agents-13_+_1-orange?style=flat-square)](#features)
+[![Output](https://img.shields.io/badge/output-Instagram_carousel-E1306C?style=flat-square&logo=instagram)](https://instagram.com/broisinvesting)
+[![Design](https://img.shields.io/badge/design-polaroid_corkboard-C28453?style=flat-square)](#features)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+
 **Multi-agent AI system for Instagram investing card-news.** Drop a topic in, and a team of 13+1 agents researches the market, drafts the narrative, designs the visuals, and ships a 6–9 slide carousel ready for `@broisinvesting` — captions, charts, memes, and a 1-page CTA PDF included.
 
-> Instagram · [@broisinvesting](https://instagram.com/broisinvesting) *(replace with handle)*
+> Instagram · [@broisinvesting](https://instagram.com/broisinvesting)
 
 ---
+
+## 💡 Why broisinvesting?
+
+Generic "AI carousel makers" stop at one image with stock fonts. broisinvesting ships an opinionated, end-to-end investing-content pipeline:
+
+- 🧠 **13+1 specialist agents** — research, validation, copy, design, layout, memes, CTA, and caption each owned by a dedicated agent
+- 🚦 **5 human-in-the-loop gates** — research → arc → script → image batches → final
+- 📸 **Polaroid corkboard Design DNA** — kraft brown + burnt sienna palette, Funko Pop mascot, rubber-stamp accents (locked across every post)
+- 🧲 **Mascot rotation rule** — CEO/founder for company posts, Buffett for value, Powell for macro — one mascot per post, always in a corner
+- 📄 **CTA PDF lead-magnet** — every post ships with a 1-page report you can attach as the reward
+- 🚀 **Auto-posting pipeline** — Cloudinary upload + Instagram Graph API publish
 
 ## Overview
 
@@ -94,6 +111,25 @@ See `broisinvesting.md/07_USAGE_GUIDE.md` for the full walkthrough.
 | v4.2 | 4-Beat narrative arc · prev_carryover · ≥3 visual asset types per post |
 | v4.1 | Meme Curator (Agent 13) · per-topic folder output |
 | v4.0 | Batch pacing · CTA PDF builder · Buffett ~40% frequency rule |
+
+---
+
+## ❓ FAQ
+
+**Q. Can the whole pipeline run unattended?**
+No — by design. CP2.5 (script approval) is the most important gate: an investing post that cites a wrong number or makes an unsupported claim is worse than no post at all. The validator agent catches a lot, but final sign-off is yours.
+
+**Q. Why a fixed Design DNA (polaroid corkboard) instead of variable per post?**
+Feed cohesion. `@broisinvesting` should look unmistakably itself at a glance. The Design DNA is locked, but per-post variables (mascot, palette accents, meme picks, layout rhythm) keep each carousel from looking identical.
+
+**Q. What does "13+1" mean?**
+13 specialist agents + 1 orchestrator that coordinates them. The orchestrator never writes copy or designs; it routes, paces, and gates.
+
+**Q. How does mascot selection work?**
+Visual Curator picks based on topic class — company → CEO/founder, value/quality → Buffett, macro/policy → Powell, etc. Buffett caps at ~40% of all posts (frequency rule) so the feed doesn't over-rely on him.
+
+**Q. Can I add my own meme to the library?**
+Yes. Drop it in `meme/`, add a row to the meme schema (slot intent, tags), and the Meme Curator (Agent 13) will start matching it.
 
 ---
 
